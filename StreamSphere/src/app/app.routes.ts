@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AuthGuard } from './auth.guard';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/signIn', pathMatch: 'full' },
+  { path: '', component: LandingPageComponent},
   { path: 'signIn', component: SignInComponent },
   { path: 'homepage', component: AppComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/signIn'}
