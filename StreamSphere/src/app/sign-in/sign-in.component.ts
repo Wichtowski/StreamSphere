@@ -30,7 +30,7 @@ export class SignInComponent {
     if (authResult === true) {
       this.signInError = false;
       this.errorFieldMessage = '';
-      this.router.navigate(['/homepage']);
+      this.router.navigate(['/']);
     } else {
       this.signInError = true;
       this.errorFieldMessage = authResult.toString();
