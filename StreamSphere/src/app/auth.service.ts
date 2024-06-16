@@ -15,7 +15,7 @@ export class AuthService {
   constructor() {}
 
   logout(): void {
-    localStorage.removeItem('sessionState');
+    sessionStorage.removeItem('sessionState');
   }
 
   authenticate(email: string, password: string): boolean | string {
@@ -29,7 +29,7 @@ export class AuthService {
     if (user.password !== password) {
       return 'Incorrect password';
     }
-    localStorage.setItem('sessionState', 'true');
+    sessionStorage.setItem('sessionState', 'true');
     return true;
   }
 }
