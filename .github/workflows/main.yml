@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
+      actor:
+        description: 'Actor to deploy'
+        required: true
+        default: 'github-actions[bot]'
+  
 
 jobs:
   build:
@@ -38,3 +49,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/stream-sphere
+          publish_branch: gh-pages
+          cname: streamsphere.io
