@@ -36,7 +36,7 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build Angular project
-        run: ng build --output-path docs
+        run: ng -- --output-path docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
