@@ -36,7 +36,9 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build Angular project
-        run: ng -- --output-path docs
+        run: |
+          ng -- --output-path docs
+          mv docs/browser docs/stream-sphere
 
       - name: Change base href in index.html
         run: sed -i 's/base href="\/"/base href="\/stream-sphere\/"/g' docs/browser/index.html
