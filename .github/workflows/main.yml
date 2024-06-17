@@ -30,7 +30,6 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies & Build Angular project
-        id: build
         run: |
           cd StreamSphere
           npm i && npm ci
@@ -38,7 +37,6 @@ jobs:
           npm run build -- --output-path docs --base-href /StreamSphere/
 
       - name: Deploy to GitHub Pages
-        needs: build
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
