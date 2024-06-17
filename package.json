@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "cd StreamSphere && npm run build"
+  },
   "dependencies": {
     "angular": "^1.8.3"
   }
