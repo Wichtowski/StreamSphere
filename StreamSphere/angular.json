@@ -18,6 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/stream-sphere",
+            "baseHref": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
