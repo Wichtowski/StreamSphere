@@ -35,6 +35,7 @@ jobs:
           npm i && npm ci
           npm install -g @angular/cli
           npm run build -- --output-path docs --base-href /StreamSphere/
+          echo "" > docs/.nojekyll  
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -43,4 +44,3 @@ jobs:
           publish_dir: docs/browser
           publish_branch: gh-pages
           keep_files: true
-          jekyll: false
