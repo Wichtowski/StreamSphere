@@ -21,13 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Build Angular project
-        run: npm run build -- --output-path docs/stream-sphere --base-href /StreamSphere/
+        run: ng -- --output-path docs/stream-sphere --base-href /StreamSphere/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: stream-sphere
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
