@@ -24,7 +24,7 @@ jobs:
       - name: Build Angular project
         run: npm run build -- --output-path docs/stream-sphere --base-href /StreamSphere/
 
-      - name: Download Artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: stream-sphere
