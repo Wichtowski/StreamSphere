@@ -2,7 +2,9 @@
   {
     "email": "user@example.com",
     "password": "123",
-    "subscriptionType": "free"
+    "profilePicture": "",
+    "subscriptionType": "free",
+    "subscriptionEndDate": "2021-12-31"
   },
   {
     "email": "admin@example.com",

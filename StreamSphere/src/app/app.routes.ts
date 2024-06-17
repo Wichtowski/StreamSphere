@@ -9,11 +9,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 export const routes: Routes = [
-  { path: '', component: LandingPageComponent},
+  { path: '', component: LandingPageComponent },
   { path: 'signIn', component: SignInComponent },
   { path: 'signUp', component: SignUpComponent },
   { path: 'browse', component: HomepageComponent, canActivate: [AuthGuard] },
   { path: 'browse/movies', component: HomepageComponent, canActivate: [AuthGuard] },
+  { path: 'browse/tv-shows', component: HomepageComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/signIn'}
 ];
 

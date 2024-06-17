@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SessionService } from '../session.service';
 import { CommonModule, NgIf } from '@angular/common';
-import { Router, NavigationEnd  } from '@angular/router';
+import { Router, NavigationEnd, RouterLink  } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +9,7 @@ import { Router, NavigationEnd  } from '@angular/router';
   imports: [
     CommonModule,
     NgIf,
+    RouterLink,
 ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
@@ -21,7 +22,6 @@ export class NavbarComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
-        console.log(this.currentUrl)
       }
     });
   }

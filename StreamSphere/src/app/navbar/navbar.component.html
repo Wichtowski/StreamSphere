@@ -22,7 +22,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            Account
+            <img  src="default-account.png" width="20px">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li><a class="dropdown-item" [ngClass]="{'active': currentUrl === '/account'}"
@@ -35,7 +35,7 @@
             </li>
             <li><a class="dropdown-item" [ngClass]="{'active': currentUrl === '/something-else'}"
                 [attr.aria-current]="currentUrl === '/something-else' ? 'page' : null"
-                routerLink="/something-else">Something else here</a></li>
+                routerLink="/something-else" (click)="logOut()">Log Out</a></li>
           </ul>
         </li>
         
