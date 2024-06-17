@@ -3,7 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
+      - main
 
 jobs:
   build:
@@ -24,6 +24,10 @@ jobs:
       - name: Build Angular project
         run: npm run build -- --output-path docs/stream-sphere --base-href /StreamSphere/
 
+      - name: Download Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: stream-sphere
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
