@@ -1,16 +1,16 @@
 {
   "name": "stream-sphere",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint '*/**/*.{js,ts,scss,json}'",
-    "lint:fix": "eslint '*/**/*.{js,ts,scss,json}' --quiet --fix",
-    "format": "prettier --write '*/**/*.{js,ts,scss,json}'",
-    "pc": "npm run lint && npm run format",
+    "lint": "npx eslint \"src/**/*.{ts,scss,json}\" --no-error-on-unmatched-pattern",
+    "lint:fix": "npx eslint \"src/**/*.{ts,scss,json}\" --quiet --fix --no-error-on-unmatched-pattern",
+    "format": "npx prettier --write 'src/**/*.{js,ts,scss,json}'",
+    "pc": "npm run lint --fix && npm run format",
     "prepare": "husky install"
   },
   "private": true,
@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@typescript-eslint/parser": "^7.13.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -36,16 +37,16 @@
     "bcryptjs": "^2.4.3",
     "eslint": "^9.5.0",
     "globals": "^15.6.0",
+    "husky": "^8.0.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.7",
     "prettier": "3.3.2",
     "typescript": "~5.4.2",
-    "typescript-eslint": "^7.13.1",
-    "husky": "^8.0.0"
+    "typescript-eslint": "^7.13.1"
   }
 }
-

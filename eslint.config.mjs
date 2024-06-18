@@ -1,9 +1,21 @@
 import globals from "globals";
-import tseslint from "typescript-eslint";
-
+import tslint from "typescript-eslint";
 
 export default [
-  {languageOptions: { globals: globals.browser }},
-  [ ignores: ["*.{ html, }"],
-  ...tseslint.configs.recommended,
+  {
+    ignores: [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/coverage/**",
+      "**angular**"
+    ],
+    languageOptions: { 
+      globals: globals.browser,
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "error",
+    },
+    ...tslint.configs.recommended,
+  }
 ];
