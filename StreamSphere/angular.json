@@ -20,7 +20,9 @@
             "outputPath": "dist/stream-sphere",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [ "polyfills.js" ],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
