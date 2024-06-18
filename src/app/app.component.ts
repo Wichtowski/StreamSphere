@@ -8,13 +8,7 @@ import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    CommonModule,
-    RouterLink,
-    NgIf,
-    Router
-  ],
+  imports: [RouterOutlet, CommonModule, RouterLink, NgIf, Router],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

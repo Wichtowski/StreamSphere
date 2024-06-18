@@ -40,10 +40,7 @@ export class SignInComponent {
   }
 
   async signIn() {
-    const authResult = await this.authService.authenticate(
-      this.email,
-      this.password,
-    );
+    const authResult = await this.authService.authenticate(this.email, this.password);
     if (authResult === true) {
       this.signInError = false;
       this.errorFieldMessage = '';

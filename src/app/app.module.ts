@@ -21,12 +21,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     LandingPageComponent,
     HomepageComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    CommonModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [BrowserModule, FormsModule, CommonModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })

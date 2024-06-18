@@ -39,10 +39,7 @@ export class AuthService {
     return this.users.find((user) => user.email === email);
   }
 
-  async authenticate(
-    email: string,
-    password: string,
-  ): Promise<string | boolean> {
+  async authenticate(email: string, password: string): Promise<string | boolean> {
     if (!email || !password) {
       return 'Email and password are required';
     }
@@ -52,10 +49,7 @@ export class AuthService {
     }
     const userPassword = user.password;
 
-    const isPasswordCorrect = await this.passwordHashing.comparePassword(
-      password,
-      userPassword,
-    );
+    const isPasswordCorrect = await this.passwordHashing.comparePassword(password, userPassword);
 
     if (!isPasswordCorrect) {
       return 'Incorrect password';
