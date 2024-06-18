@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand-logo" href="#"><img src="logo.png" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mobile-menu">
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{ active: currentUrl === '/browse' }"
+            [attr.aria-current]="currentUrl === '/browse' ? 'page' : null" routerLink="/browse">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{ active: currentUrl === '/browse/movies' }"
+            [attr.aria-current]="currentUrl === '/movies' ? 'page' : null" routerLink="/browse/movies">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{ active: currentUrl === '/browse/tv-shows' }"
+            [attr.aria-current]="currentUrl === '/tv-shows' ? 'page' : null" routerLink="/browse/tv-shows">TV Shows</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="default-account.png" width="20px" />
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li>
+              <a class="dropdown-item" [ngClass]="{ active: currentUrl === '/account' }"
+                [attr.aria-current]="currentUrl === '/action' ? 'page' : null" routerLink="/action">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [ngClass]="{ active: currentUrl === '/another-action' }" [attr.aria-current]="
+                  currentUrl === '/another-action' ? 'page' : null
+                " routerLink="/another-action">Another action</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" [ngClass]="{ active: currentUrl === '/something-else' }" [attr.aria-current]="
+                  currentUrl === '/something-else' ? 'page' : null
+                " routerLink="/something-else" (click)="logOut()">Log Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

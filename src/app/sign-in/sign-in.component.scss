@@ -1,0 +1,221 @@
+@import "../variables";
+@import "../mixins";
+
+app-sign-in {
+  height: 100%;
+  width: 100%;
+}
+
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  background: center;
+  background-size: cover;
+  background-image: url("../../../public/people-watching-in-cinema.jpg");
+  box-shadow: $box-shadow;
+}
+.sign-in-box {
+  background: rgba(31, 31, 31, 0.8);
+  width: 520px;
+  height: 550px;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: $spacing_8;
+  h2 {
+    margin-top: $spacing_1;
+    margin-bottom: $spacing_3;
+    font-size: 32px;
+  }
+  button {
+    @include text-hover;
+    @include text-style;
+
+    padding: $spacing_1;
+    background-color: $background-color_1;
+    border: none;
+    color: $color_3;
+    font-weight: $bold;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+.form-group:first-child {
+  margin-top: $spacing_4;
+}
+.form-group {
+  position: relative;
+  margin-bottom: $spacing_3;
+  input {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &:focus {
+      ~ {
+        label {
+          top: -20px;
+          left: 5px;
+          font-size: 12px;
+          color: $color_1;
+        }
+      }
+      outline: none;
+      border-color: $border-color_1;
+    }
+    &:not(:placeholder-shown) {
+      ~ {
+        label {
+          top: -20px;
+          left: 5px;
+          @include label-style;
+        }
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 16px;
+    color: $color_1;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+  }
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing_3;
+  span {
+    @include label-style;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+.remember-me #rememberMe {
+  appearance: none;
+  background-color: $color_3;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+}
+
+.remember-me #rememberMe::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.remember-me #rememberMe,
+.remember-me #rememberMe::after {
+  transition: all 100ms ease-out;
+  margin-right: $spacing_2;
+}
+
+.remember-me #rememberMe::after {
+  background-color: $color_1;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+  cursor: default;
+}
+
+.remember-me #rememberMe:hover {
+  background-color: $color_5;
+  transition-duration: 0.1s;
+}
+
+.remember-me #rememberMe:checked {
+  background-color: $color_2;
+}
+
+.remember-me #rememberMe:checked::after {
+  background-color: $color_3;
+  left: 13px;
+}
+
+.remember-me :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.remember-me #rememberMe:checked:hover {
+  background-color: $color_2;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-bottom: $spacing_1;
+  margin-top: $spacing_1;
+}
+.sign-up-prompt {
+  font-size: 16px;
+  margin-top: $spacing_3;
+  margin-bottom: $spacing_2;
+  text-align: left;
+  color: $color_1;
+
+  a {
+    color: $color_3;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $color_2;
+  }
+}
+.navbar-brand-logo {
+  img {
+    height: 50px;
+  }
+}
+.floating-logo {
+  position: absolute;
+  top: $spacing_3;
+  right: $spacing_6;
+  img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sign-in-box {
+    width: 100%;
+    margin: $spacing_8 $spacing_2;
+    padding: $spacing_2;
+  }
+  .floating-logo {
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 65px;
+    }
+  }
+}

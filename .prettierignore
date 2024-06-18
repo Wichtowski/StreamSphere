@@ -1,0 +1,12 @@
+# Ignore artifacts:
+.build/
+.idea/
+.vscode/
+.git/
+.gitignore
+dist/
+node_modules/
+docs/
+coverage/
+.husky/
+**/*.html

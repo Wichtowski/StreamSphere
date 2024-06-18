@@ -1,0 +1,22 @@
+@mixin text-style {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: $bold;
+  color: $color_4;
+}
+
+@mixin text-hover {
+  &:hover {
+    background-color: $background-color_2;
+    color: $color_1;
+    transition: 0.2s ease-in-out;
+  }
+  & {
+    transition: 0.2s ease-in-out;
+  }
+}
+
+@mixin label-style {
+  font-size: 12px;
+  color: $color_1;
+}
