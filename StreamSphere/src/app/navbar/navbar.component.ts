@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { SessionService } from '../session.service';
 import { CommonModule, NgIf } from '@angular/common';
 import { Router, NavigationEnd, RouterLink  } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,7 @@ export class NavbarComponent {
   logo: boolean = false;
   currentUrl: string = '';
 
-  constructor(private sessionService: SessionService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private sessionService: SessionService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
@@ -26,12 +27,14 @@ export class NavbarComponent {
     });
   }
   ngOnInit() {
-    const logo = this.sessionService.readSessionStorageValue('sessionState');
-    this.logo = logo === 'true' ? true : false;
+    const logo = this.authService.getLogState();
+    console.log(logo);
+    this.logo = logo === true ? true : false;
   }
 
   logOut() {
-    sessionStorage.removeItem('sessionState');
+    this.authService.logOut();
+    this.sessionService.setSessionState(false);
     this.logo = false;
     this.router.navigate(['/']);
   }

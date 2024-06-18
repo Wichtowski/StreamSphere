@@ -2,8 +2,8 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { RouterLink } from '@angular/router';
-import { SessionService } from './session.service';
+import { RouterLink, Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +12,18 @@ import { SessionService } from './session.service';
     RouterOutlet, 
     CommonModule, 
     RouterLink,
-    NgIf
+    NgIf,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'StreamSphere';
-  sessionState: boolean = false;
+  userData: Object = {};
+  isLoggedIn: boolean = false;
 
-  constructor(private sessionService: SessionService) {}
+  constructor(private userService: AuthService) {}
 
   ngOnInit() {
-
   }
 }

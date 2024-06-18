@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';  
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { SessionService } from '../session.service';
 import { RouterLink } from '@angular/router';
-
+import { User } from '../utils/interface.user';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -27,11 +27,10 @@ export class SignInComponent {
   errorFieldMessage: string = '';
   signInError: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router, private sessionService: SessionService) {}
+  constructor(private authService: AuthService, private router: Router, private sessionState: SessionService) {}
 
   ngOnInit() {
-    const sessionState = this.sessionService.readSessionStorageValue('sessionState');
-    if (sessionState) {
+    if (this.sessionState.getSessionState()){
       this.router.navigate(['/browse']);
     }
     const email = localStorage.getItem('email');
@@ -41,8 +40,8 @@ export class SignInComponent {
     }
   }
 
-  signIn() {
-    const authResult = this.authService.authenticate(this.email, this.password);
+  async signIn() {
+    const authResult = await this.authService.authenticate(this.email, this.password);
     if (authResult === true) {
       this.signInError = false;
       this.errorFieldMessage = '';
@@ -52,11 +51,20 @@ export class SignInComponent {
       if (this.rememberMe === false) {
         localStorage.removeItem('email');
       }
+      this.authService.isLoggedIn = true;
+      const data: User | undefined = this.authService.getUserInfo(this.email);
+      if (data === undefined) {
+        return;
+      }
+      this.authService.setUserData(data);
+      console.log(this.authService.getUserData());
+      const logState = this.authService.getLogState();
+      console.log(logState);
+      this.sessionState.setSessionState(logState);
       this.router.navigate(['/browse']);
     } else {
       this.signInError = true;
       this.errorFieldMessage = authResult.toString();
-      
     }
   }
 }

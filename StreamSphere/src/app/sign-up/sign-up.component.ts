@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { SessionService } from '../session.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -24,13 +24,21 @@ export class SignUpComponent {
   signUpError: boolean = false;
   errorMessage: string = '';
 
-  constructor(private router: Router, private sessionService: SessionService) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
-  signUp() {
-    const sessionState = this.sessionService.readSessionStorageValue('sessionState');
-    if (sessionState) {
+  ngOnInit() {
+    const logState = this.authService.getLogState();
+    if (logState) {
       this.router.navigate(['/browse']);
     }
+    const email = localStorage.getItem('email');
+    if (email) {
+      this.email = email;
+      this.rememberMe = true;
+    }
+  }
+
+  signUp() {
 
     if (this.password !== this.confirmPassword) {
       this.signUpError = true;
