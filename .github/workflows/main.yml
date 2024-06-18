@@ -30,7 +30,6 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies & Build Angular project
-        working-directory: StreamSphere
         run: |
           npm i && npm ci
           npm install -g @angular/cli
