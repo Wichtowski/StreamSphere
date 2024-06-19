@@ -40,4 +40,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: .build/browser
+          folder: StreamSphere/.build/browser
