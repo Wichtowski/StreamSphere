@@ -1,0 +1,25 @@
+app-single-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.single-video {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100vh;
+    height: 100vh;
+  }
+  .video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
