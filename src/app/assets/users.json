@@ -8,7 +8,9 @@
   },
   {
     "email": "admin@example.com",
-    "password": "adminpass",
-    "subscriptionType": "premium"
+    "password": "$2a$10$FXShzQELjjG1W/1mzGbZhOi/osIuhtB.3KUET5EII1Y3vp4DmXLsS",
+    "profilePicture": "admin",
+    "subscriptionType": "premium",
+    "subscriptionEndDate": "12-31-2021"
   }
 ]

@@ -56,9 +56,7 @@ export class SignInComponent {
         return;
       }
       this.authService.setUserData(data);
-      console.log(this.authService.getUserData());
       const logState = this.authService.getLogState();
-      console.log(logState);
       this.sessionState.setSessionState(logState);
       this.router.navigate(['/browse']);
     } else {

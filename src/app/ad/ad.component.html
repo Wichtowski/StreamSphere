@@ -1,0 +1,17 @@
+<div [ngSwitch]="subscriptionType">
+    <div *ngSwitchCase="'free'" class="ad-container">
+        <!-- Ad content for free subscription -->
+        <p>This is an advertisement for free users.</p>
+        <img src="path-to-your-ad-image-free.jpg" alt="Ad Image for Free Users">
+    </div>
+    <div *ngSwitchCase="'premium'" class="ad-container">
+        <!-- Ad content for premium subscription -->
+        <p>This is an advertisement for premium users.</p>
+        <img src="path-to-your-ad-image-premium.jpg" alt="Ad Image for Premium Users">
+    </div>
+    <div *ngSwitchDefault class="ad-container">
+        <!-- Default ad content -->
+        <p>This is a default advertisement.</p>
+        <img src="path-to-your-ad-image-default.jpg" alt="Default Ad Image">
+    </div>
+</div>
