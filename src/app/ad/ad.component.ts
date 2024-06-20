@@ -6,16 +6,10 @@ import { SessionService } from '../services/session.service';
 @Component({
   selector: 'app-ad',
   standalone: true,
-  imports: [
-    CommonModule, 
-    RouterLink,
-    NgSwitch,
-  ],
+  imports: [CommonModule, RouterLink, NgSwitch],
   templateUrl: './ad.component.html',
-  styleUrl: './ad.component.scss'
+  styleUrl: './ad.component.scss',
 })
-
-
 export class AdComponent {
   subscriptionType: string = 'free' || 'premium';
 

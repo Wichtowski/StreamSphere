@@ -7,12 +7,7 @@ import { AdComponent } from '../ad/ad.component';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [
-    CommonModule, 
-    RouterLink, 
-    NavbarComponent,
-    AdComponent,
-  ],
+  imports: [CommonModule, RouterLink, NavbarComponent, AdComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
