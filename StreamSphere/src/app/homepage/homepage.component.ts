@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, Router } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-homepage',
@@ -9,7 +10,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
   imports: [
     CommonModule,
     RouterLink,
-    NavbarComponent
+    NavbarComponent,
+    CarouselComponent
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'

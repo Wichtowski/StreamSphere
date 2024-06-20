@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
@@ -18,6 +19,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     SignInComponent,
     SignUpComponent,
     NavbarComponent,
+    CarouselComponent,
     LandingPageComponent,
     HomepageComponent,
   ],
