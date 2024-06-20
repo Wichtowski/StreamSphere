@@ -1,0 +1,17 @@
+<div *ngIf="video; else noVideo" class="single-video">
+    <div class="video-container" *ngIf="useYouTubePlayer">
+      <iframe [src]="youtubeEmbedUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container" *ngIf="!useYouTubePlayer">
+      <video-js #videoPlayer [id]="video?.customPlayerID" class="vjs-default-skin" controls preload="auto" >
+        <source [src]="getVideoSource(video?.customPlayerID)" type="video/mp4">
+      </video-js>
+    </div>
+</div>
+  
+<ng-template #noVideo>
+    <p>Video not found</p>
+</ng-template>
+
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  

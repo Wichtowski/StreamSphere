@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "npx eslint \"src/**/*.{ts,scss,json}\" --no-error-on-unmatched-pattern",
     "lint:fix": "npx eslint \"src/**/*.{ts,scss,json}\" --quiet --fix --no-error-on-unmatched-pattern",
+    "format:check": "npx prettier --check 'src/**/*.{js,ts,scss,json}'",
     "format": "npx prettier --write 'src/**/*.{js,ts,scss,json}'",
     "pc": "npm run lint --fix && npm run format",
     "prepare": "husky install"
@@ -47,6 +48,7 @@
     "lint-staged": "^15.2.7",
     "prettier": "3.3.2",
     "typescript": "~5.4.2",
-    "typescript-eslint": "^7.13.1"
+    "typescript-eslint": "^7.13.1",
+    "video.js": "^8.12.0"
   }
 }

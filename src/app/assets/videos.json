@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "The Matrix",
+    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+    "rating": 8.7,
+    "poster": "assets/posters/matrix.jpg",
+    "youtubeID": "vKQi3bBA1y8"
+  },
+  {
+    "id": 2,
+    "title": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "rating": 8.8,
+    "poster": "assets/posters/inception.jpg",
+    "youtubeID": "YoHD9XEInc0"
+  },
+  {
+    "id": 3,
+    "title": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "rating": 8.6,
+    "poster": "assets/posters/interstellar.jpg",
+    "youtubeID": "zSWdZVtXT7E"
+  },
+  {
+    "id": 4,
+    "title": "One Punch Man",
+    "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.",
+    "rating": 9.0,
+    "poster": "one-punch-man-5nllppby1814evua.jpg",
+    "customPlayerID": "One-Punch-Man-Official-Trailer"
+  }
+]
