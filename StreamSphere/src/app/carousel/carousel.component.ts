@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { Router, NavigationEnd, RouterLink  } from '@angular/router';
-import { AuthService } from '../services/auth.service';
-import { SessionService } from '../services/session.service';
 import { OnInit } from '@angular/core';
+import videos from '../assets/videos.json';
 
 @Component({
   selector: 'app-carousel',
@@ -17,39 +16,34 @@ import { OnInit } from '@angular/core';
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent implements OnInit  {
-  slides = [
-    'one-piece.png',
-    'sponge.png',
-    'adventure-time.png'
-  ];
-  currentSlide = 0;
-  slideInterval: any;
+  slides = videos
+
+  currentSlide: number = 0;
+  slideInterval: ReturnType<typeof setInterval> | null = null;
 
   ngOnInit() {
-    //Nie wiem czy to chcemy
-    //this.startAutoSlide();
+    this.startAutoSlide();
   }
 
   next() {
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+    this.updateTransform();
   }
 
   prev() {
     this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.updateTransform();
   }
 
   goToSlide(index: number) {
     this.currentSlide = index;
-    //Nie wiem czy to chcemy
-    //this.stopAutoSlide();
-    //this.startAutoSlide();
+    this.updateTransform();
+    this.stopAutoSlide();
+    this.startAutoSlide();
   }
 
-  //Nie wiem czy to chcemy
-  /*
-
   startAutoSlide() {
-    this.slideInterval = setInterval(() => this.next(), 3000);
+    this.slideInterval = setInterval(() => this.next(), 60000);
   }
 
   stopAutoSlide() {
@@ -57,5 +51,14 @@ export class CarouselComponent implements OnInit  {
       clearInterval(this.slideInterval);
     }
   }
-  */
+
+  updateTransform() {
+    var math =0;
+    document.querySelectorAll('.carousel-item').forEach(element => {
+      math+=1;
+    });
+    math=100/math;
+    const carouselInner = document.querySelector('.carousel-inner') as HTMLElement;
+    carouselInner.style.transform = `translateX(-${this.currentSlide * math}%)`;
+  }
 }

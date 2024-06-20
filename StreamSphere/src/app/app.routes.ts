@@ -17,6 +17,7 @@ export const routes: Routes = [
   { path: 'browse/tv-shows', component: HomepageComponent, canActivate: [AuthGuard] },
   { path: '', component: LandingPageComponent },
   { path: '**', redirectTo: 'browse', pathMatch: 'full', },
+  { path: 'browse/watch' , component: HomepageComponent, canActivate: [AuthGuard]}
 
 ];
 

@@ -3,9 +3,12 @@
       <div
         *ngFor="let slide of slides; let i = index"
         class="carousel-item"
-        [class.active]="i === currentSlide"
       >
-        <img [src]="slide" alt="Slide {{ i + 1 }}">
+        <img [src]="slide.poster" alt="Slide {{ i + 1 }}">
+        <div class="carousel-caption">
+          <h1>{{ slide.title }}</h1>
+          <p>{{ slide.description }}</p>
+        </div>
       </div>
     </div>
     <button class="carousel-control-prev" (click)="prev()">&lt;</button>

@@ -2,26 +2,39 @@
 
 .carousel {
     position: relative;
-    width: 80%;
     margin: auto;
     overflow: hidden;
     border-radius: 30px;
   }
   
+
   .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
+    overflow: hidden;
+    width: fit-content;
   }
   
   .carousel-item {
-    min-width: 100%;
-    transition: opacity 1s ease;
+    display:block;
+    width:100vw;
+    transition: transform 0.5s ease;
+    margin:0;
   }
   
   .carousel-item img {
     display: block;
     width: 100%;
-    max-height:500px;
+    max-height:600px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width:50%;
+    color: $color_3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
   
   .carousel-control-prev,
