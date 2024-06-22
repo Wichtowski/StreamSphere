@@ -25,11 +25,12 @@ export class SignInComponent {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private sessionState: SessionService,
+    private sessionService: SessionService,
   ) {}
 
   ngOnInit() {
-    if (this.sessionState.getSessionState()) {
+    const logState = this.sessionService.getSessionState();
+    if (logState) {
       this.router.navigate(['/browse']);
     }
     const email = localStorage.getItem('email');
@@ -57,7 +58,7 @@ export class SignInComponent {
       }
       this.authService.setUserData(data);
       const logState = this.authService.getLogState();
-      this.sessionState.setSessionState(logState);
+      this.sessionService.setSessionState(logState);
       this.router.navigate(['/browse']);
     } else {
       this.signInError = true;
