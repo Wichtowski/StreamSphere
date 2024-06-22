@@ -14,15 +14,15 @@
 </div>
 
 <div class="container col-xxl-8 px-4 py-5">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+  <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5" >
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="placeholder.png" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy" />
+      <img src="placeholder.png" class="d-block mx-lg-auto img-fluid" width="700" height="500" />
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 card-down" >
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-        Watch everywhere.
+        Watch everywhere
       </h1>
-      <p class="lead">
+      <p class="lead card-down-text">
         No need for a TV with an expensive cable plan. Your favorite shows are
         available for you everywhere you go.
       </p>
@@ -31,13 +31,13 @@
 </div>
 
 <div class="container col-xxl-8 px-4 py-5">
-  <div class="row flex-lg-row align-items-center g-5 py-5">
+  <div class="row flex-lg-row align-items-center justify-content-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img src="placeholder.png" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy" />
     </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Download.</h1>
-      <p class="lead">
+    <div class="col-lg-6 card-down" style="" >
+      <h1 class="display-5 fw-bold text-body-emphasis justify-content-center lh-1 mb-3">Download</h1>
+      <p class="lead card-down-text">
         Worried about your internet connection? Download your favorite shows and
         movies to watch offline.
       </p>
@@ -73,23 +73,24 @@
               <li>Watch from the comfort of your browser</li>
               <li>One user per account</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-light">
+            <button type="button" class="w-100 btn btn-lg btn-outline-light" routerLink="/signUp">
               Sign up for free
             </button>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
+        <div id="regular" class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Regular</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              $14.99<small class="text-body-secondary fw-light">/mo</small>
+              <span id="regular-price">$9.99</span><span id="new-regular-price">$5.99</span><small
+                class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Ad-free experience</li>
+              <li>Less Ad-supported experience</li>
               <li>Watch your shows in Full HD</li>
               <li>Watch on-line or download shows to view offline!</li>
               <li>Up to 4 user accounts</li>
@@ -101,13 +102,14 @@
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm border-light">
+        <div id="premium" class="card mb-4 rounded-3 shadow-sm border-light">
           <div class="card-header py-3 text-bg-light border-light">
             <h4 class="my-0 fw-normal">Premium</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              $24.99<small class="text-body-secondary fw-light">/mo</small>
+              <span id="premium-price">$24.99</span><span id="new-premium-price">$12.49</span><small
+                class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Ad-free experience</li>

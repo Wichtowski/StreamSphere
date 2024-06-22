@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { AuthService } from '../services/auth.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,11 +22,11 @@ export class SignUpComponent {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private sessionService: SessionService,
   ) {}
 
   ngOnInit() {
-    const logState = this.authService.getLogState();
+    const logState = this.sessionService.getSessionState();
     if (logState) {
       this.router.navigate(['/browse']);
     }

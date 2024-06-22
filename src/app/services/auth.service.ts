@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import users from '../assets/users.json';
 import { PasswordHashingService } from './password-hashing.service';
+import { LocalStorageService } from './local-storage.service';
 import { User } from '../utils/interface.user';
 
 @Injectable({
@@ -11,7 +12,10 @@ export class AuthService {
   private userData: Partial<User> = {};
   public isLoggedIn: boolean = false;
 
-  constructor(private passwordHashing: PasswordHashingService) {}
+  constructor(
+    private passwordHashing: PasswordHashingService,
+    private localStorageService: LocalStorageService,
+  ) {}
 
   logOut(): void {
     this.isLoggedIn = false;
@@ -29,6 +33,7 @@ export class AuthService {
       subscriptionType: data.subscriptionType,
       subscriptionEndDate: data.subscriptionEndDate,
     };
+    this.localStorageService.setUserLocalStorage(this.userData, 'userData');
   }
 
   getUserData(): Object {

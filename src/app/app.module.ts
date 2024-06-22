@@ -11,6 +11,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SingleVideoComponent } from './single-video/single-video.component';
+import { AdComponent } from './ad/ad.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     NavbarComponent,
     LandingPageComponent,
     HomepageComponent,
+    SingleVideoComponent,
+    AdComponent,
   ],
   imports: [BrowserModule, FormsModule, CommonModule, RouterModule.forRoot(routes)],
   providers: [],
