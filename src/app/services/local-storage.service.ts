@@ -10,6 +10,10 @@ export class LocalStorageService {
     localStorage.setItem(`${fieldName}`, JSON.stringify(data));
   }
 
+  clearLocalStorage(): void {
+    localStorage.clear();
+  }
+
   getFieldFromUserLocalStorage(field: string, fieldName: string): string | null {
     const userData = localStorage.getItem(`${fieldName}`);
     if (userData) {

@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { CommonModule, NgIf, NgSwitch } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ import { AdComponent } from './ad/ad.component';
     SingleVideoComponent,
     AdComponent,
   ],
-  imports: [BrowserModule, FormsModule, CommonModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })

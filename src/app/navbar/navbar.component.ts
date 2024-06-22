@@ -3,6 +3,7 @@ import { CommonModule, NgIf } from '@angular/common';
 import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { SessionService } from '../services/session.service';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +20,7 @@ export class NavbarComponent {
     private authService: AuthService,
     private router: Router,
     private sessionService: SessionService,
+    private localStorageService: LocalStorageService,
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -34,10 +36,8 @@ export class NavbarComponent {
   logOut() {
     this.authService.logOut();
     this.sessionService.setSessionState(false);
+    this.localStorageService.clearLocalStorage();
     this.logo = false;
     this.router.navigate(['/']);
   }
-  // <li class="nav-item">
-  // <button class="nav-link log-out-button">Log Out</button>
-  // </li>
 }
