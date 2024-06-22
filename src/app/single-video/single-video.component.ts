@@ -6,7 +6,6 @@ import { AuthService } from '../services/auth.service';
 import { LocalStorageService } from '../services/local-storage.service';
 import videos from '../assets/videos.json';
 import videojs from 'video.js';
-import Player from 'video.js/dist/types/player';
 
 export interface Videos {
   id: number;
@@ -77,7 +76,7 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
   }
 
   getUserVideoQuality(): string {
-    const subType = this.localStorageService.getFieldFromUserLocalStorage('subscriptionType');
+    const subType = this.localStorageService.getFieldFromUserLocalStorage('subscriptionType', 'userData');
     if (subType) {
       return subType === 'premium' ? '1440p' : '720p';
     } else {
