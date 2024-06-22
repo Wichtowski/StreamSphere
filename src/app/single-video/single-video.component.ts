@@ -1,3 +1,4 @@
+
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule, NgIf } from '@angular/common';
@@ -52,6 +53,7 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
         }
       }
     });
+
     this.resetHideButtonTimeout();
   }
 
