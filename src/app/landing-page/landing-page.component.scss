@@ -38,3 +38,15 @@ body {
 #regular.colorStay {
   background-color: $color_6;
 }
+
+@media screen and (max-width: 990px) {
+  .card-down {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-down-text {
+    text-align: center;
+  }
+}
