@@ -48,6 +48,7 @@ export class AdComponent implements OnInit {
         }
       }
     }
+    this.localStorageService.setUserLocalStorage({ ad: this.randAdNum }, 'ad');
 
     const saleEndTime = new Date('07-20-2024');
 
