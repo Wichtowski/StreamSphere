@@ -73,20 +73,21 @@
               <li>Watch from the comfort of your browser</li>
               <li>One user per account</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-light" routerLink="signUp">
+            <button type="button" class="w-100 btn btn-lg btn-outline-light" routerLink="/signUp">
               Sign up for free
             </button>
           </div>
         </div>
       </div>
-      <div class="col" id="regular">
-        <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="col">
+        <div id="regular" class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Regular</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              $14.99<small class="text-body-secondary fw-light">/mo</small>
+              <span id="regular-price">$9.99</span><span id="new-regular-price">$5.99</span><small
+                class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Less Ad-supported experience</li>
@@ -100,14 +101,15 @@
           </div>
         </div>
       </div>
-      <div class="col" id="premium">
-        <div class="card mb-4 rounded-3 shadow-sm border-light">
+      <div class="col">
+        <div id="premium" class="card mb-4 rounded-3 shadow-sm border-light">
           <div class="card-header py-3 text-bg-light border-light">
             <h4 class="my-0 fw-normal">Premium</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              $24.99<small class="text-body-secondary fw-light">/mo</small>
+              <span id="premium-price">$24.99</span><span id="new-premium-price">$12.49</span><small
+                class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Ad-free experience</li>

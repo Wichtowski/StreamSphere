@@ -1,4 +1,40 @@
+@import '../variables.scss';
 body {
   background-color: #121212;
   color: #ffffff;
+}
+@keyframes highlightAnimation {
+  0% {
+    background-color: $color_2;
+    transform: scale(1);
+  }
+  50% {
+    background-color: $color_6;
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: $color_7;
+    transform: scale(1);
+  }
+}
+
+#premium.highlight {
+  animation: highlightAnimation 1.5s ease-in-out;
+}
+#new-premium-price {
+  display: none;
+}
+#new-regular-price {
+  display: none;
+}
+#premium.colorStay {
+  background-color: $color_7;
+}
+
+#regular.highlight {
+  animation: highlightAnimation 1.5s ease-in-out;
+}
+
+#regular.colorStay {
+  background-color: $color_6;
 }
