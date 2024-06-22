@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guard/auth.guard';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -26,8 +26,13 @@ export const routes: Routes = [
   { path: '**', redirectTo: 'browse', pathMatch: 'full' },
 ];
 
+const routerOptions: ExtraOptions = {
+  onSameUrlNavigation: 'reload', // This ensures navigation within the same route triggers events
+  scrollPositionRestoration: 'enabled', // This restores the scroll position on navigation
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

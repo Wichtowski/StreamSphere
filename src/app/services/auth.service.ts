@@ -33,7 +33,7 @@ export class AuthService {
       subscriptionType: data.subscriptionType,
       subscriptionEndDate: data.subscriptionEndDate,
     };
-    this.localStorageService.setUserLocalStorage(this.userData);
+    this.localStorageService.setUserLocalStorage(this.userData, 'userData');
   }
 
   getUserData(): Object {

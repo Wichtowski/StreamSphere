@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
   constructor() {}
 
-  setUserLocalStorage(data: Object): void {
-    localStorage.setItem('userData', JSON.stringify(data));
+  setUserLocalStorage(data: Object, fieldName: string): void {
+    localStorage.setItem(`${fieldName}`, JSON.stringify(data));
   }
 
-  getFieldFromUserLocalStorage(field: string): string | null {
-    const userData = localStorage.getItem('userData');
+  getFieldFromUserLocalStorage(field: string, fieldName: string): string | null {
+    const userData = localStorage.getItem(`${fieldName}`);
     if (userData) {
       const parsedUserData = JSON.parse(userData);
       return parsedUserData[field];

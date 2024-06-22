@@ -7,7 +7,7 @@
     "subscriptionEndDate": "12-31-2021"
   },
   {
-    "email": "user@example.com",
+    "email": "regular@example.com",
     "password": "$2a$10$Sohsb7iS448lkh3w6sN6tOatdnMRvRoW5Wm3DXF/NCEw/RzPJWZ0q",
     "profilePicture": "",
     "subscriptionType": "regular",
