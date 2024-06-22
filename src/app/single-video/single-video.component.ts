@@ -1,7 +1,7 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule, NgIf } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { LocalStorageService } from '../services/local-storage.service';
 import videos from '../assets/videos.json';
@@ -20,7 +20,7 @@ export interface Videos {
 @Component({
   selector: 'app-single-video',
   standalone: true,
-  imports: [CommonModule, NgIf],
+  imports: [CommonModule, NgIf, RouterLink],
   templateUrl: './single-video.component.html',
   styleUrls: ['./single-video.component.scss'],
 })
@@ -30,6 +30,7 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
   youtubeEmbedUrl: SafeResourceUrl | undefined;
   useYouTubePlayer: boolean = false;
   playerInitialized: boolean = false;
+  hideButtonTimeout: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -51,6 +52,7 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
         }
       }
     });
+    this.resetHideButtonTimeout();
   }
 
   ngAfterViewInit() {
@@ -69,6 +71,26 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
       });
       this.playerInitialized = true;
     }
+  }
+
+  @HostListener('document:mousemove', [])
+  @HostListener('document:touchstart', [])
+  onUserInteraction(): void {
+    this.resetHideButtonTimeout();
+    const backButton = document.querySelector('.back-button') as HTMLElement;
+    if (backButton) {
+      backButton.classList.remove('hidden');
+    }
+  }
+
+  resetHideButtonTimeout(): void {
+    clearTimeout(this.hideButtonTimeout);
+    this.hideButtonTimeout = setTimeout(() => {
+      const backButton = document.querySelector('.back-button') as HTMLElement;
+      if (backButton) {
+        backButton.classList.add('hidden');
+      }
+    }, 1500);
   }
 
   getSafeUrl(url: string): SafeResourceUrl {

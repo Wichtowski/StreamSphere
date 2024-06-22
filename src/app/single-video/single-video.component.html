@@ -1,4 +1,7 @@
 <div *ngIf="video; else noVideo" class="single-video">
+    <div class="back-button-container">
+      <button class="back-button" routerLink="/browse">Go Back</button>
+    </div>
     <div class="video-container" *ngIf="useYouTubePlayer">
       <iframe [src]="youtubeEmbedUrl" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -10,8 +13,11 @@
 </div>
   
 <ng-template #noVideo>
+  <div class="no-video">
     <p>Video not found</p>
+    <button class="back-button-novideo" routerLink="/browse">Go Back</button>
+  </div>
 </ng-template>
-
+  
 <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
   
