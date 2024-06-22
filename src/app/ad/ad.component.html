@@ -1,27 +1,114 @@
 <div [ngSwitch]="subscriptionType">
     <div *ngSwitchCase="'free'" class="ad-container">
-        <div [ngSwitch]="randAd">
-        <div *ngSwitchCase="0">
-            <p>{{ randAd }}</p>
-            <img src="try-premium.png" alt="Ad Image for Free Users">
-        </div>
-        <div *ngSwitchCase="1">
-            <p>{{ randAd }}</p>
-            <img src="path-to-your-ad-image-free-1.jpg" alt="Ad Image for Free Users">
-        </div>
-        <div *ngSwitchCase="2">
-            <p>{{ randAd }}</p>
-            <img src="path-to-your-ad-image-free-2.jpg" alt="Ad Image for Free Users">
-        </div>
+        <div [ngSwitch]="randAdNum" class="ad-switch">
+            <div *ngSwitchCase="0" class="ad-content" [routerLink]="['/']" fragment="premium">
+                <div class="ad-desktop-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="try-premium.png" alt="{{ altText }}">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-mobile-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="try-premium-mobile.png" alt="{{altText}}" loading="lazy">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="1" class="ad-content" [routerLink]="['/']" fragment="premium">
+                <div class="ad-desktop-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="premium-plan.png" alt="{{altText}}">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-mobile-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="premium-plan-mobile.png" alt="{{altText}}" loading="lazy">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="2" class="ad-content" [routerLink]="['/']" fragment="regular">
+                <div class="ad-desktop-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="regular-plan.png" alt="{{altText}}">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-mobile-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="countdown-overlay">
+                        <img src="regular-plan-mobile.png" alt="{{altText}}" loading="lazy">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div *ngSwitchCase="'regular'" class="ad-container">
-        <p>Thank you for choosing <b>basic</b></p>
-        <img src="path-to-your-ad-image-basic.jpg" alt="Ad Image for Basic Users">
+        <div [ngSwitch]="randAdNum" class="ad-switch">
+            <div *ngSwitchCase="0" class="ad-content" [routerLink]="['/']" fragment="premium">
+                <div class="ad-desktop-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="try-premium.png" alt="{{ altText }}">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-mobile-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="try-premium-mobile.png" alt="{{altText}}" loading="lazy">
+                        <div class="countdown-overlay">
+                            <p>{{ countdownText }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="1" class="ad-content" [routerLink]="['/']" fragment="premium">
+                <div class="ad-desktop-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="premium-plan.png" alt="{{altText}}">
+                        <div class="countdown-overlay">
+                            <p>{{countdownText}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-mobile-content">
+                    <p>{{[paragraf]}}</p>
+                    <div class="image-container">
+                        <img src="premium-plan-mobile.png" alt="{{altText}}" loading="lazy">
+                        <div class="countdown-overlay">
+                            <p>{{countdownText}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div *ngSwitchCase="'premium'" class="ad-container">
         <p>Thank you for staying with <b>premium</b></p>
         <img src="path-to-your-ad-image-premium.jpg" alt="Ad Image for Premium Users">
     </div>
 </div>
-  
