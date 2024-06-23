@@ -19,12 +19,14 @@
   width: 100vw;
   transition: transform 0.5s ease;
   margin: 0;
+  height: 60vh;
 }
 
 .carousel-item img {
   display: block;
   width: 100%;
-  max-height: 600px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption {
