@@ -32,20 +32,18 @@
   bottom: 20px;
   left: 0;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.carousel-text 
-{
-  color:$color_3;
+.carousel-text {
+  color: $color_3;
   text-shadow: 2px 2px 4px $color_4;
-  padding-left:30px;
+  padding-left: 30px;
 }
 
-.carousel-button
-{
-  padding-right:30px;
+.carousel-button {
+  padding-right: 30px;
 }
 
 .carousel-control-prev,
