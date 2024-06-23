@@ -10,7 +10,15 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule, RouterLink, NavbarComponent, CarouselComponent, AdComponent, SingleVideoComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    RouterLink,
+    NavbarComponent,
+    CarouselComponent,
+    AdComponent,
+    SingleVideoComponent,
+    FooterComponent,
+  ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })

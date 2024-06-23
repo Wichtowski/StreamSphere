@@ -1,8 +1,11 @@
+@import '../variables.scss';
+
 .footer {
   background-color: #0e0e0e;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 1px;
+  margin-top: $spacing_3;
 }
 
 .footer img {
