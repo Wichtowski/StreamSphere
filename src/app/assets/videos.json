@@ -20,7 +20,7 @@
     "title": "SpongeBob SquarePants",
     "description": "Join SpongeBob and his friends in their underwater adventures.",
     "rating": 8.6,
-    "poster": "sponge.png",
+    "poster": "spongebob.png",
     "youtubeID": "zSWdZVtXT7E"
   },
   {
@@ -28,7 +28,7 @@
     "title": "The Matrix",
     "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
     "rating": 8.7,
-    "poster": "assets/posters/matrix.jpg",
+    "poster": "matrix.png",
     "youtubeID": "vKQi3bBA1y8"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Inception",
     "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     "rating": 8.8,
-    "poster": "assets/posters/inception.jpg",
+    "poster": "inception.png",
     "youtubeID": "YoHD9XEInc0"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Interstellar",
     "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
     "rating": 8.6,
-    "poster": "assets/posters/interstellar.jpg",
+    "poster": "interstellar.png",
     "youtubeID": "zSWdZVtXT7E"
   },
   {
@@ -52,7 +52,7 @@
     "title": "One Punch Man",
     "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.",
     "rating": 9.0,
-    "poster": "one-punch-man-5nllppby1814evua.jpg",
+    "poster": "one-punch-man.png",
     "customPlayerID": "One-Punch-Man-Official-Trailer"
   }
 ]

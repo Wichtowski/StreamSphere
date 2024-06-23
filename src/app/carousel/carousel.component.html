@@ -6,11 +6,11 @@
       >
         <img [src]="slide.poster" alt="Slide {{ i + 1 }}">
         <div class="carousel-caption">
-          <div>
+          <div class="carousel-text">
             <h1>{{ slide.title }}</h1>
             <p>{{ slide.description }}</p>
           </div>
-          <div>
+          <div class="carousel-button">
             <button class="btn btn-primary" [routerLink]="['/browse/watch']" [queryParams]="{ id: slide.id }">Watch Now</button>
           </div>
         </div>
