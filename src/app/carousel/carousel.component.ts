@@ -12,7 +12,7 @@ import videos from '../assets/videos.json';
   styleUrl: './carousel.component.scss',
 })
 export class CarouselComponent implements OnInit {
-  slides = videos;
+  slides = videos.slice(0, 7);
 
   currentSlide: number = 0;
   slideInterval: ReturnType<typeof setInterval> | null = null;
