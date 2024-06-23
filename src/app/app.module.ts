@@ -13,6 +13,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdComponent } from './ad/ad.component';
+import { HttpClient, provideHttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,10 @@ import { AdComponent } from './ad/ad.component';
     LandingPageComponent,
     HomepageComponent,
     SingleVideoComponent,
-    AdComponent,
+    AdComponent
   ],
-  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
-  providers: [],
+  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes), HttpClientModule],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
