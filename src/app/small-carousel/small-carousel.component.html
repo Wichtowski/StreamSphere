@@ -1,0 +1,20 @@
+<div [attr.data-id]="carouselId" class="small-carousel carousel">
+    <div [attr.data-id]="carouselId" class="small-carousel-inner carousel-inner">
+      <div
+        *ngFor="let slide of slides; let i = index"
+        class="small-carousel-item carousel-item"
+      >
+        <img [src]="slide.poster" alt="Slide {{ i + 1 }}">
+        <div class="small-carousel-caption carousel-caption">
+          <div class="small-carousel-text">
+            <h1>{{ slide.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" (click)="prev()">&lt;</button>
+    <button class="carousel-control-next" (click)="next()">&gt;</button>
+    <div class="small-carousel-indicators carousel-indicators">
+    </div>
+  </div>
+  

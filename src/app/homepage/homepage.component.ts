@@ -6,6 +6,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 import { AdComponent } from '../ad/ad.component';
 import { SingleVideoComponent } from '../single-video/single-video.component';
 import { FooterComponent } from '../footer/footer.component';
+import { SmallCarouselComponent } from '../small-carousel/small-carousel.component';
 
 @Component({
   selector: 'app-homepage',
@@ -18,6 +19,7 @@ import { FooterComponent } from '../footer/footer.component';
     AdComponent,
     SingleVideoComponent,
     FooterComponent,
+    SmallCarouselComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',

@@ -50,11 +50,11 @@ export class CarouselComponent implements OnInit {
 
   updateTransform() {
     var math = 0;
-    document.querySelectorAll('.carousel-item').forEach((element) => {
+    document.querySelectorAll('.banner-carousel-item').forEach((element) => {
       math += 1;
     });
     math = 100 / math;
-    const carouselInner = document.querySelector('.carousel-inner') as HTMLElement;
+    const carouselInner = document.querySelector('.banner-carousel-inner') as HTMLElement;
     carouselInner.style.transform = `translateX(-${this.currentSlide * math}%)`;
   }
 }
