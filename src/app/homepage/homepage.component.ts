@@ -9,13 +9,7 @@ import { SingleVideoComponent } from '../single-video/single-video.component';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    NavbarComponent,
-    CarouselComponent
-  ],
-  imports: [CommonModule, RouterLink, NavbarComponent, AdComponent, SingleVideoComponent],
+  imports: [CommonModule, RouterLink, NavbarComponent, CarouselComponent, AdComponent, SingleVideoComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
