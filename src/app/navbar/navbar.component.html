@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mobile-menu">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mobile-menu" style="align-items: center;">
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{ active: currentUrl === '/browse' }"
             [attr.aria-current]="currentUrl === '/browse' ? 'page' : null" routerLink="/browse">Home</a>
@@ -22,7 +22,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="default-account.png" width="20px" />
+            <img src="default-account.png" class="profilePicture" width="40px" />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li>
