@@ -1,0 +1,86 @@
+@import '../variables.scss';
+
+.no-video {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: $spacing_7 auto;
+  font-size: $spacing_4;
+  .back-button-novideo {
+    margin-top: $spacing_3;
+  }
+}
+
+.single-video {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100vh;
+    height: 100vh;
+  }
+  .video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    iframe,
+    video-js {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.back-button,
+.back-button-novideo {
+  background-image: linear-gradient($color_2, $color_6);
+  border: 1px solid #0077cc;
+  border-radius: $spacing_1;
+  z-index: 999;
+  color: $color_3;
+  cursor: pointer;
+  padding: $spacing_1 $spacing_3;
+  width: 20%;
+
+  &:hover {
+    background-image: linear-gradient(#51a9ee, #147bcd);
+    border-color: #1482d0;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-image: linear-gradient(#3d94d9, #0067b9);
+    border-color: #006dbc;
+    outline: none;
+  }
+
+  &:focus {
+    box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #e0e0e0;
+    border: 1px solid #aaa;
+  }
+  &.hidden {
+    opacity: 0;
+  }
+}
+.back-button-container {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top: 20%;
+}
+
+@media screen and (max-width: 990px) {
+  .back-button,
+  .back-button-novideo {
+    width: 100%;
+  }
+  .back-button-container {
+    top: 10%;
+  }
+}

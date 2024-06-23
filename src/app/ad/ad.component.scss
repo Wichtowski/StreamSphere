@@ -1,0 +1,94 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.ad-container {
+  padding: $spacing_2;
+  margin: $spacing_3 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  .ad-switch {
+    .ad-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .ad-mobile-content {
+        display: none;
+      }
+      .ad-desktop-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+
+        p {
+          position: relative;
+          margin: 0;
+          font-weight: $bold;
+          text-shadow: 1px 1px 1px $color_4;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+        img {
+          margin: 0 auto;
+          width: 100%;
+          border-radius: $spacing_2;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+      .image-container {
+        position: relative; // Ensure the container is positioned relatively for absolute positioning of overlay
+
+        img {
+          max-width: 100%; // Ensure the image does not exceed its container
+          display: block;
+        }
+
+        .countdown-overlay {
+          position: absolute;
+          top: 10px; // Adjust this value to position the countdown overlay vertically
+          left: 10px; // Adjust this value to position the countdown overlay horizontally
+          background-color: rgba(0, 0, 0, 0.7); // Semi-transparent black background
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+
+          p {
+            margin: 0;
+            font-size: 14px; // Adjust font size as needed
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .ad-container {
+    padding: $spacing_1;
+    margin: $spacing_2 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    .ad-switch {
+      .ad-content {
+        .ad-mobile-content {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          img {
+            margin: 0 auto;
+            width: 100%;
+            border-radius: $spacing_2;
+          }
+        }
+        .ad-desktop-content {
+          display: none;
+        }
+      }
+    }
+  }
+}

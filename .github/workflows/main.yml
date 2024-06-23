@@ -30,9 +30,8 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies & Build Angular project
-        working-directory: StreamSphere
         run: |
-          npm i && npm ci
+          npm install --legacy-peer-deps
           npm install -g @angular/cli
           npm run build -- --output-path .build --base-href /StreamSphere/
 
@@ -41,4 +40,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: StreamSphere/.build/browser
+          folder: .build/browser
