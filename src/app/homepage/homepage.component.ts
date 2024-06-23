@@ -4,11 +4,12 @@ import { RouterLink, Router } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { AdComponent } from '../ad/ad.component';
 import { SingleVideoComponent } from '../single-video/single-video.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule, RouterLink, NavbarComponent, AdComponent, SingleVideoComponent],
+  imports: [CommonModule, RouterLink, NavbarComponent, AdComponent, SingleVideoComponent, FooterComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
