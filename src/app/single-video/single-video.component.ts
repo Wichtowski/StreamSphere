@@ -72,6 +72,7 @@ export class SingleVideoComponent implements OnInit, AfterViewInit {
       });
       this.playerInitialized = true;
     }
+    console.log(this.video);
   }
 
   @HostListener('document:mousemove', [])
