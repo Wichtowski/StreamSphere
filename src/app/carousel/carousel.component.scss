@@ -29,6 +29,17 @@
   object-fit: cover;
 }
 
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%; 
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); 
+  pointer-events: none;
+}
+
 .carousel-caption {
   position: absolute;
   bottom: 20px;
@@ -41,7 +52,8 @@
 .carousel-text {
   color: $color_3;
   text-shadow: 2px 2px 4px $color_4;
-  padding-left: 30px;
+  padding-left: $spacing_8;
+  text-align: left;
 }
 
 .carousel-button {
@@ -61,12 +73,14 @@
   width: 4rem;
   height: 4rem;
   border-radius: 100%;
-  margin: 2rem;
+  margin: 0 $spacing_2;
   display: flex;
+  padding-bottom: 6px;
 }
 
 .carousel-control-prev {
   left: 0;
+  padding-right: 4px;
 }
 
 .carousel-control-next {

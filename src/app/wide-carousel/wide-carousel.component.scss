@@ -1,0 +1,116 @@
+@import '../variables.scss';
+    
+.swiper-item {
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    .swiper-text {
+        position: absolute;
+        z-index: 9999999;
+        bottom: 10%;
+        width: 90%;
+        left:5%;
+        h2 {
+            color: $color_3;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px $color_4;
+            text-align: left;
+        }
+    }
+    .swiper-small {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .swiper-small-title {
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px $color_4;
+            text-align: left;
+            display: inline-block;
+        }
+    }
+}
+.play-icon {
+    height: 20px;
+    padding-left: 3px;
+    transition: .2s ease-in-out all;
+}
+.play-icon:hover {
+    padding-left: 3px;
+    transition: .2s ease-in-out all;
+    transform: scale(1.2);
+}
+.swiper-button > button {
+    border-radius: 100%;
+    background-color: $color_4;
+    border-color: $color_7;
+}
+
+.swiper-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; 
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); 
+    pointer-events: none;
+}
+
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 990px) {
+    .swiper-text {
+        .swiper-button > p {
+            display: none;
+        }
+    }
+    .play-icon {
+        height: 20px;
+        padding-left: 3px;
+        transition: .2s ease-in-out all;
+    }
+    .play-icon:hover {
+        padding-left: 3px;
+        transition: .2s ease-in-out all;
+        transform: scale(1.2);
+    }
+    .swiper-button > button {
+        border-radius: 100%;
+        background-color: $color_4;
+        border-color: $color_7;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .swiper-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h2 {
+            font-size: 1.5rem !important;
+            text-shadow: 2px 2px 4px $color_4;
+            text-align: left;
+            display: inline-block;
+        }
+    }
+    .swiper-item {
+        display: inline-block;
+        text-align: left;
+        
+        .swiper-text {
+            position: absolute;
+            z-index: 9999999;
+            top: 10%;
+            width: 90%;
+            right:5%;
+        }
+    }
+}
