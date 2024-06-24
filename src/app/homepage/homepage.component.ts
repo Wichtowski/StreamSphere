@@ -24,7 +24,7 @@ import { WideCarouselComponent } from '../wide-carousel/wide-carousel.component'
     SingleVideoComponent,
     FooterComponent,
     SmallCarouselComponent,
-    WideCarouselComponent
+    WideCarouselComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',

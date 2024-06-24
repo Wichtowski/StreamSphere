@@ -11,10 +11,9 @@ import { Navigation, Pagination } from 'swiper/modules';
   imports: [NgFor, NgIf, RouterLink, NgClass],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './wide-carousel.component.html',
-  styleUrls: ['./wide-carousel.component.scss']
+  styleUrls: ['./wide-carousel.component.scss'],
 })
-
-export class WideCarouselComponent implements OnInit, AfterViewInit{
+export class WideCarouselComponent implements OnInit, AfterViewInit {
   @Input() carouselId: string = '';
   @Input() genre: string = '';
   @Input() slidesPerView: number = 0;
@@ -27,11 +26,11 @@ export class WideCarouselComponent implements OnInit, AfterViewInit{
   @Input() spaceBetween: number = 0;
   @Input() centeredSlides: boolean = false;
   @Input() grabCursor: boolean = false;
-  
+
   slides = videos;
   carouselLength = this.slides.length;
 
-  constructor() { }
+  constructor() {}
   ngOnInit(): void {
     register();
   }
@@ -39,7 +38,9 @@ export class WideCarouselComponent implements OnInit, AfterViewInit{
   ngAfterViewInit(): void {
     this.genre.toLocaleLowerCase();
     const swiperEl: any = document.querySelector(`swiper-container[data-id="${this.carouselId}"]`);
-    const swiperSlidesData = document.querySelectorAll(`swiper-container[data-id="${this.carouselId}"] > swiper-slide[data-info]`);
+    const swiperSlidesData = document.querySelectorAll(
+      `swiper-container[data-id="${this.carouselId}"] > swiper-slide[data-info]`,
+    );
     if (this.genre !== 'all') {
       swiperSlidesData.forEach((slide: any) => {
         if (!slide.dataset.info.includes(this.genre)) {
@@ -48,7 +49,6 @@ export class WideCarouselComponent implements OnInit, AfterViewInit{
       });
     }
 
-    
     const swiperParams = {
       loop: true,
       lazy: true,

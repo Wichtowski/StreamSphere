@@ -8,10 +8,9 @@ describe('WideCarouselComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WideCarouselComponent]
-    })
-    .compileComponents();
-    
+      imports: [WideCarouselComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(WideCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

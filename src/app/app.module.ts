@@ -29,7 +29,7 @@ import { WideCarouselComponent } from './wide-carousel/wide-carousel.component';
     SingleVideoComponent,
     AdComponent,
     SmallCarouselComponent,
-    WideCarouselComponent
+    WideCarouselComponent,
   ],
   imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
   providers: [],
