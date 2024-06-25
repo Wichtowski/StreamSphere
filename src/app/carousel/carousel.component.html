@@ -7,11 +7,11 @@
         <img [src]="slide.poster" alt="Slide {{ i + 1 }}">
         <div class="carousel-caption">
           <div class="carousel-text">
-            <h1>{{ slide.title }}</h1>
-            <p>{{ slide.description }}</p>
+            <h1 style="font-size: 5em;">{{ slide.title }}</h1>
+            <p style="font-size: 1.6em;">{{ slide.description }}</p>
           </div>
           <div class="carousel-button">
-            <button class="btn btn-primary" [routerLink]="['/browse/watch']" [queryParams]="{ id: slide.id }">Watch Now</button>
+            <button class="btn btn-primary btn-lg" [routerLink]="['/browse/watch']" [queryParams]="{ id: slide.id }">Watch Now</button>
           </div>
         </div>
       </div>
