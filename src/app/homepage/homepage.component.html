@@ -1,12 +1,9 @@
-<app-navbar />
-<div style="display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+<div style="display: flex; flex-direction: column; justify-content: center;">
+    <app-navbar />
     <app-carousel />
     <app-ad />
-    <h1>Featured</h1>
     <app-small-carousel [carouselId]="'carousel1'"></app-small-carousel>
-    <h1>Recently Watched</h1>
     <app-small-carousel [carouselId]="'carousel2'"></app-small-carousel>
-    <h1>Based on Your Recommendations</h1>
     <app-small-carousel [carouselId]="'carousel3'"></app-small-carousel>
+    <app-footer />
 </div>
-<app-footer />
