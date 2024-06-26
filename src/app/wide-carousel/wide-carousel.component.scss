@@ -41,7 +41,7 @@
   transition: 0.2s ease-in-out all;
   transform: scale(1.2);
 }
-.swiper-button > button {
+.swiper-button {
   border-radius: 100%;
   background-color: $color_4;
   border-color: $color_7;
@@ -57,6 +57,15 @@
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   pointer-events: none;
 }
+.swiper-item-3::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  width: 100%;
+}
+.swiper-item-3 {
+  .swiper-button {
+    
+  }
+}
 
 swiper-container {
   width: 100%;
@@ -67,7 +76,7 @@ swiper-container {
 
 @media screen and (max-width: 990px) {
   .swiper-text {
-    .swiper-button > p {
+    .swiper-desc {
       display: none;
     }
   }
@@ -81,7 +90,7 @@ swiper-container {
     transition: 0.2s ease-in-out all;
     transform: scale(1.2);
   }
-  .swiper-button > button {
+  .swiper-button {
     border-radius: 100%;
     background-color: $color_4;
     border-color: $color_7;

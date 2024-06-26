@@ -1,19 +1,19 @@
-
 <h1 *ngIf="genre !== 'all'">{{genre}}</h1>
 <swiper-container init="false" [attr.data-id]="carouselId" [attr.data]="genre" [attr.navigation]="navigation"
     [attr.pagination-dynamic-bullets]="pagination" [attr.scrollbar]="scrollbar" [attr.space-between]="spaceBetween"
-    [attr.centered-slides]="centeredSlides" [attr.grab-cursor]="grabCursor"
-    [attr.autoplay]="autoplay" [attr.pagination-dynamic-bullets]="dynamicBullets" ng-attr-slides-per-view="{{slidesPerView <= 1 ? 1 : 3}}"
-    >
-    <swiper-slide *ngFor="let slide of slides; let i = index;" class="swiper-item" [attr.data-info]="slide.genre">
+    [attr.centered-slides]="centeredSlides" [attr.grab-cursor]="grabCursor" [attr.autoplay]="autoplay"
+    [attr.pagination-dynamic-bullets]="dynamicBullets" ng-attr-slides-per-view="{{slidesPerView <= 1 ? 1 : 3}}">
+    <swiper-slide *ngFor="let slide of slides; let i = index;" class="swiper-item swiper-item-{{slidesPerView}}"
+        [attr.data-info]="slide.genre">
         <div class="swiper-image">
             <img [src]="slide.poster" alt="Slide {{ i + 1 }}">
         </div>
         <div class="swiper-text" [ngClass]="{'swiper-small': slidesPerView > 3}">
             <h2 [ngClass]="{'swiper-small-title': slidesPerView > 3}">{{slide.title}}</h2>
-            <div class="swiper-button">
+            <div class="swiper-button-container">
                 <p class="swiper-desc" *ngIf="slidesPerView<=3">{{slide.description}}</p>
-                <button class="btn btn-primary" [routerLink]="['/browse/watch']" [queryParams]="{ id: slide.id }"><img src="play-solid.svg" class="play-icon"></button>
+                <button class="btn btn-primary swiper-button" [routerLink]="['/browse/watch']"
+                    [queryParams]="{ id: slide.id }"><img src="play-solid.svg" class="play-icon"></button>
             </div>
         </div>
     </swiper-slide>
