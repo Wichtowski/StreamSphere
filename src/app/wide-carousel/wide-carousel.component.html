@@ -1,4 +1,5 @@
-<h1 *ngIf="genre !== 'all'">{{genre}}</h1>
+
+<h1 *ngIf="genre !== 'all'" style="padding-top: 40px; padding-left: 30px; padding-bottom: 10px;">{{genre}}</h1>
 <swiper-container init="false" [attr.data-id]="carouselId" [attr.data]="genre" [attr.navigation]="navigation"
     [attr.pagination-dynamic-bullets]="pagination" [attr.scrollbar]="scrollbar" [attr.space-between]="spaceBetween"
     [attr.centered-slides]="centeredSlides" [attr.grab-cursor]="grabCursor" [attr.autoplay]="autoplay"
