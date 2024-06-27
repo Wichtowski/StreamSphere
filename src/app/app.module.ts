@@ -15,6 +15,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdComponent } from './ad/ad.component';
 import { SmallCarouselComponent } from './small-carousel/small-carousel.component';
+import { WideCarouselComponent } from './wide-carousel/wide-carousel.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SmallCarouselComponent } from './small-carousel/small-carousel.componen
     SingleVideoComponent,
     AdComponent,
     SmallCarouselComponent,
+    WideCarouselComponent,
   ],
   imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
   providers: [],
