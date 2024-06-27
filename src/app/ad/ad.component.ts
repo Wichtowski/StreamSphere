@@ -25,7 +25,7 @@ export class AdComponent implements OnInit {
       this.subscriptionType = subscriptionType;
       this.altText = `Advertisement Image for ${this.subscriptionType} Users`;
     }
-    
+
     if (!['0', '1', '2', '3'].includes(this.adId)) {
       this.adId = '0';
     }
