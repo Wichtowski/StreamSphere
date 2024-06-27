@@ -1,0 +1,109 @@
+@import '../variables';
+
+.small-carousel {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  background: $color_4;
+}
+
+.small-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  overflow: visible;
+  width: 100%;
+}
+
+.small-carousel-item {
+  display: block;
+  min-width: 15%;
+  transition: transform 0.5s ease;
+  height: 20vh;
+  box-sizing: border-box;
+  position: relative;
+  margin: $spacing_1;
+}
+
+.small-carousel-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.15s ease-out;
+}
+
+.small-carousel-item:hover img {
+  filter: brightness(0.5);
+}
+
+.small-carousel-item:hover .small-carousel-text h1 {
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease;
+}
+
+.small-carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-wrap: wrap;
+}
+
+.small-carousel-text h1 {
+  color: $color_3;
+  text-shadow: 2px 2px 2px $color_4;
+  font-size: 1.3rem;
+}
+
+.carousel-button {
+  padding-right: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 30);
+  color: $color_3;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  margin: 2rem;
+  display: flex;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.small-carousel-indicators .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: $color_1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+  background-color: $color_3;
+}

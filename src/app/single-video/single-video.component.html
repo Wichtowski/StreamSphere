@@ -1,4 +1,4 @@
-<div *ngIf="video; else noVideo" class="single-video">
+<div *ngIf="video && (video.youtubeID || video.customPlayerID); else noVideo" class="single-video">
     <div class="back-button-container">
       <button class="back-button" routerLink="/browse">Go Back</button>
     </div>

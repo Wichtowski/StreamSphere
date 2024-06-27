@@ -1,34 +1,181 @@
 [
   {
     "id": 1,
-    "title": "The Matrix",
-    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
-    "rating": 8.7,
-    "poster": "assets/posters/matrix.jpg",
-    "youtubeID": "vKQi3bBA1y8"
+    "title": "SpongeBob SquarePants",
+    "description": "Join SpongeBob and his friends in their underwater adventures.",
+    "rating": 8.6,
+    "poster": "spongebob.png",
+    "genre": "Kids",
+    "youtubeID": "zSWdZ"
   },
   {
     "id": 2,
-    "title": "Inception",
-    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "title": "Adventure Time",
+    "description": "Finn and Jake embark on surreal adventures in the Land of Ooo.",
     "rating": 8.8,
-    "poster": "assets/posters/inception.jpg",
-    "youtubeID": "YoHD9XEInc0"
+    "genre": "Action, Adventure",
+    "poster": "adventure-time.png"
   },
   {
     "id": 3,
-    "title": "Interstellar",
-    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-    "rating": 8.6,
-    "poster": "assets/posters/interstellar.jpg",
-    "youtubeID": "zSWdZVtXT7E"
+    "title": "One Piece",
+    "description": "An epic adventure on the high seas with Luffy and his crew.",
+    "rating": 8.7,
+    "poster": "one-piece.png",
+    "genre": "Anime, Action",
+    "youtubeID": "lNMSqxQtO0w"
   },
   {
     "id": 4,
+    "title": "The Matrix",
+    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+    "rating": 8.7,
+    "poster": "matrix.png",
+    "genre": "Action, Mature, Sci-Fi",
+    "youtubeID": "vKQi3bBA1y8"
+  },
+  {
+    "id": 5,
+    "title": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "rating": 8.8,
+    "poster": "inception.png",
+    "genre": "Action, Mature, Sci-Fi, Thriller",
+    "youtubeID": "YoHD9XEInc0"
+  },
+  {
+    "id": 6,
+    "title": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "rating": 8.6,
+    "poster": "interstellar.png",
+    "genre": "Action, Mature, Sci-Fi, Thriller, Drama",
+    "youtubeID": "zSWdZVtXT7E"
+  },
+  {
+    "id": 7,
     "title": "One Punch Man",
     "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.",
     "rating": 9.0,
-    "poster": "one-punch-man-5nllppby1814evua.jpg",
+    "poster": "one-punch-man.png",
+    "genre": "Anime, Action, Comedy",
     "customPlayerID": "One-Punch-Man-Official-Trailer"
+  },
+  {
+    "id": 8,
+    "title": "Rick and Morty",
+    "description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",
+    "rating": 9.2,
+    "poster": "rick-and-morty.png",
+    "genre": "Action, Adventure, Comedy",
+    "customPlayerID": "Rick-and-Morty-Official-Trailer"
+  },
+  {
+    "id": 9,
+    "title": "The Simpsons",
+    "description": "The satiric adventures of a working-class family in the misfit city of Springfield.",
+    "rating": 8.7,
+    "poster": "simpsons.png",
+    "genre": "Animation, Comedy",
+    "customPlayerID": "The-Simpsons-Official-Trailer"
+  },
+  {
+    "id": 10,
+    "title": "Breaking Bad",
+    "description": "A high school chemistry teacher turned meth maker partners with a former student to secure his family's future.",
+    "rating": 9.5,
+    "poster": "breaking-bad.png",
+    "genre": "Crime, Drama, Thriller",
+    "customPlayerID": "Breaking-Bad-Official-Trailer"
+  },
+  {
+    "id": 11,
+    "title": "Game of Thrones",
+    "description": "Nine noble families fight for control over the mythical lands of Westeros.",
+    "rating": 9.3,
+    "poster": "game-of-thrones.png",
+    "genre": "Action, Adventure, Drama",
+    "customPlayerID": "Game-of-Thrones-Official-Trailer"
+  },
+  {
+    "id": 12,
+    "title": "The Walking Dead",
+    "description": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins, and must lead a group of survivors to stay alive.",
+    "rating": 8.4,
+    "poster": "the-walking-dead.png",
+    "genre": "Drama, Horror, Thriller",
+    "customPlayerID": "The-Walking-Dead-Official-Trailer"
+  },
+  {
+    "id": 13,
+    "title": "Attack on Titan",
+    "description": "Humanity lives in cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures.",
+    "rating": 9.1,
+    "poster": "attack-on-titan.png",
+    "genre": "Anime, Action, Drama, Fantasy",
+    "customPlayerID": "Attack-On-Titan-Official-Trailer"
+  },
+  {
+    "id": 14,
+    "title": "My Hero Academia",
+    "description": "In a world where people with superpowers are the norm, Izuku Midoriya dreams of becoming a Hero.",
+    "rating": 8.5,
+    "poster": "my-hero-academia.png",
+    "genre": "Anime, Action, Adventure, Superhero",
+    "customPlayerID": "My-Hero-Academia-Official-Trailer"
+  },
+  {
+    "id": 15,
+    "title": "Naruto",
+    "description": "Follows the journey of Naruto Uzumaki, a young ninja who seeks recognition from his peers.",
+    "rating": 8.6,
+    "poster": "naruto.png",
+    "genre": "Anime, Action, Adventure",
+    "customPlayerID": "Naruto-Official-Trailer"
+  },
+  {
+    "id": 16,
+    "title": "Death Note",
+    "description": "Light Yagami finds a mysterious notebook that allows him to kill anyone by writing their name while picturing their face.",
+    "rating": 9.0,
+    "poster": "death-note.png",
+    "genre": "Anime, Mystery, Psychological, Supernatural, Thriller",
+    "customPlayerID": "Death-Note-Official-Trailer"
+  },
+  {
+    "id": 17,
+    "title": "Sword Art Online",
+    "description": "Players trapped in a virtual reality MMORPG must beat the game to escape, facing dangers both in-game and in reality.",
+    "rating": 7.6,
+    "poster": "sword-art-online.png",
+    "genre": "Anime, Action, Adventure, Fantasy, Romance",
+    "customPlayerID": "Sword-Art-Online-Official-Trailer"
+  },
+  {
+    "id": 18,
+    "title": "Fullmetal Alchemist",
+    "description": "Two brothers seek the Philosopher's Stone to restore their bodies after a failed alchemy experiment.",
+    "rating": 9.1,
+    "poster": "fullmetal-alchemist-brotherhood.png",
+    "genre": "Anime, Action, Adventure, Drama, Fantasy",
+    "customPlayerID": "Fullmetal-Alchemist-Brotherhood-Official-Trailer"
+  },
+  {
+    "id": 19,
+    "title": "Cowboy Bebop",
+    "description": "A group of bounty hunters chase criminals across the galaxy aboard their spaceship, the Bebop.",
+    "rating": 8.9,
+    "poster": "cowboy-bebop.png",
+    "genre": "Anime, Action, Adventure, Sci-Fi",
+    "customPlayerID": "Cowboy-Bebop-Official-Trailer"
+  },
+  {
+    "id": 20,
+    "title": "Evangelion",
+    "description": "A group of teenagers pilot giant robots to protect Earth from mysterious creatures known as Angels.",
+    "rating": 8.5,
+    "poster": "neon-genesis-evangelion.png",
+    "genre": "Anime, Action, Mecha, Psychological, Sci-Fi",
+    "customPlayerID": "Neon-Genesis-Evangelion-Official-Trailer"
   }
 ]

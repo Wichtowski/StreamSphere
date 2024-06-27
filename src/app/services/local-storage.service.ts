@@ -11,7 +11,7 @@ export class LocalStorageService {
   }
 
   clearLocalStorage(): void {
-    localStorage.clear();
+    localStorage.removeItem('userData');
   }
 
   getFieldFromUserLocalStorage(field: string, fieldName: string): string | null {

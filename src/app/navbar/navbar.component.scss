@@ -5,25 +5,38 @@
     height: 65px;
   }
 }
-.navbar-item {
-  margin-right: $spacing_3;
+.nav-item {
+  margin-right: $spacing_2;
   font-size: 16px;
 }
-
+.nav-item:first-child {
+  margin-left: $spacing_5;
+}
+.profilePicture {
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+}
 @media screen and (max-width: 990px) {
   .log-out-button {
     padding: 19px 32px;
   }
   .mobile-menu {
     align-items: center;
-    li {
+    li.nav-item {
       width: 100%;
       border-bottom: #ccc 1px solid;
       text-align: center;
+      margin: 0;
       &:last-child {
         border-bottom: none;
         margin-top: $spacing_1;
       }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .dropdown-item {
+      text-align: center;
     }
   }
 }

@@ -7,6 +7,7 @@
   display: flex;
   text-align: center;
   align-items: center;
+  justify-content: center;
 
   .ad-switch {
     .ad-content {
@@ -39,25 +40,25 @@
         }
       }
       .image-container {
-        position: relative; // Ensure the container is positioned relatively for absolute positioning of overlay
+        position: relative;
 
         img {
-          max-width: 100%; // Ensure the image does not exceed its container
+          max-width: 100%;
           display: block;
         }
 
         .countdown-overlay {
           position: absolute;
-          top: 10px; // Adjust this value to position the countdown overlay vertically
-          left: 10px; // Adjust this value to position the countdown overlay horizontally
-          background-color: rgba(0, 0, 0, 0.7); // Semi-transparent black background
+          top: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.7);
           color: white;
           padding: 10px;
           border-radius: 5px;
 
           p {
             margin: 0;
-            font-size: 14px; // Adjust font size as needed
+            font-size: 14px;
           }
         }
       }
