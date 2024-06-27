@@ -20,7 +20,7 @@ export class SmallCarouselComponent {
   slides: Slide[] = videos.slice(0, 7);
   pages: { slides: Slide[] }[] = [];
   currentPageIndex: number = 0;
-  slidesPerPage: number = 3; // Number of slides per page
+  slidesPerPage: number = 3;
 
   ngOnInit() {
     this.generatePages();

@@ -32,7 +32,16 @@ import { WideCarouselComponent } from './wide-carousel/wide-carousel.component';
     SmallCarouselComponent,
     WideCarouselComponent,
   ],
-  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes), HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    RouterLink,
+    NgSwitch,
+    NgIf,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
