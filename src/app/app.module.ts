@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule, NgIf, NgSwitch } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { HttpClient, provideHttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -15,6 +16,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdComponent } from './ad/ad.component';
 import { SmallCarouselComponent } from './small-carousel/small-carousel.component';
+import { WideCarouselComponent } from './wide-carousel/wide-carousel.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,19 @@ import { SmallCarouselComponent } from './small-carousel/small-carousel.componen
     SingleVideoComponent,
     AdComponent,
     SmallCarouselComponent,
+    WideCarouselComponent,
   ],
-  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
-  providers: [],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    RouterLink,
+    NgSwitch,
+    NgIf,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

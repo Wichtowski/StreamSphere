@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand-logo" href="#"><img src="logo.png" /></a>
+    <a class="navbar-brand-logo" routerLink="/browse"><img src="logo.png" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
       aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,6 +18,10 @@
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{ active: currentUrl === '/browse/tv-shows' }"
             [attr.aria-current]="currentUrl === '/tv-shows' ? 'page' : null" routerLink="/browse/tv-shows">TV Shows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{ active: currentUrl === '/' }"
+            [attr.aria-current]="currentUrl === '/' ? 'page' : null" [routerLink]="['/']" fragment="pricing">Pricing</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"

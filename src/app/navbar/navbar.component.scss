@@ -22,14 +22,21 @@
   }
   .mobile-menu {
     align-items: center;
-    li {
+    li.nav-item {
       width: 100%;
       border-bottom: #ccc 1px solid;
       text-align: center;
+      margin: 0;
       &:last-child {
         border-bottom: none;
         margin-top: $spacing_1;
       }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .dropdown-item {
+      text-align: center;
     }
   }
 }

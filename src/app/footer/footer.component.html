@@ -2,9 +2,7 @@
 
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                <h3>Follow us on:</h3>
-            </a>
+            <h3>Follow us on:</h3><br>
             <a routerLink="/"><img src="facebook.webp"></a>
             <a routerLink="/"><img src="instagram.webp"></a>
             <a routerLink="/"><img src="tiktok.png"></a>
@@ -22,8 +20,8 @@
         <div class="col mb-3">
             <h5>FAQ</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Featuers</a></li>
+                <li class="nav-item mb-2"><a [routerLink]="['/']" fragment="pricing" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="https://docs.google.com/presentation/d/1zB_xm2-OVIn3q8riZ2h_4Mls-M30XSeA-xg0liat67g/edit?usp=sharing" class="nav-link p-0 text-body-secondary">Featuers</a></li>
                 <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Jobs</a></li>
                 <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">StreamSphere Originals</a></li>
                 <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
@@ -34,7 +32,7 @@
             <h5>For Developers</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Our API</a></li>
-                <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Open Source</a></li>
+                <li class="nav-item mb-2"><a href="https://github.com/Wichtowski/StreamSphere" class="nav-link p-0 text-body-secondary">Open Source</a></li>
                 <li class="nav-item mb-2"><a routerLink="/" class="nav-link p-0 text-body-secondary">Examples</a></li>
             </ul>
         </div>

@@ -1,22 +1,27 @@
 <div class="px-4 py-5 my-5 text-center" data-bs-theme="dark">
-  <h1 class="display-5 fw-bold text-body-emphasis">Join StreamSphere</h1>
+  <img src="./logo.png" style="padding-bottom: 50px; width: 80vw; max-width: 502px;">
+  <h1 class="display-5 fw-bold text-body-emphasis">
+    <span *ngIf="isLoggedIn()">Adjust Your Plan!</span>
+    <span *ngIf="!isLoggedIn()">Join StreamSphere</span>
+  </h1>
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">
       Thousands of on-demand movies and shows, all accessible from the comfort
       of your browser.
     </p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3">
-        Log in!
-      </button>
-    </div>
+  </div>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3">
+      <span *ngIf="isLoggedIn()">Back to Browse</span>
+      <span *ngIf="!isLoggedIn()">Log In</span>
+    </button>
   </div>
 </div>
 
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5" >
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="./watch_anim.webp" class="d-block mx-lg-auto img-fluid" width="700" height="500" />
+      <img src="./watch_anim.webp" class="d-block mx-lg-auto img-fluid" width="700" height="500" style="border-radius: 30px;"/>
     </div>
     <div class="col-lg-6 card-down" >
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
@@ -33,9 +38,9 @@
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row align-items-center justify-content-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="./download_anim.webp" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy" />
+      <img src="./download_anim.webp" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy" style="border-radius: 30px;"/>
     </div>
-    <div class="col-lg-6 card-down" style="" >
+    <div class="col-lg-6 card-down" >
       <h1 class="display-5 fw-bold text-body-emphasis justify-content-center lh-1 mb-3">Download</h1>
       <p class="lead card-down-text">
         Worried about your internet connection? Download your favorite shows and
@@ -47,7 +52,7 @@
 
 <div class="container py-3">
   <header>
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" id="pricing">
       <h1 class="display-4 fw-normal text-body-emphasis">Plans</h1>
       <p class="fs-5 text-body-secondary">
         Pick a perfect plan to suit your viewing needs. Or try it
@@ -86,7 +91,7 @@
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              <span id="regular-price">$9.99</span><span id="new-regular-price">$5.99</span><small
+              <span id="regular-price">PLN 49.99</span><span id="new-regular-price">PLN 24.99</span><small
                 class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -108,7 +113,7 @@
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">
-              <span id="premium-price">$24.99</span><span id="new-premium-price">$12.49</span><small
+              <span id="premium-price">PLN 99.99</span><span id="new-premium-price">PLN 49.99</span><small
                 class="text-body-secondary fw-light">/mo</small>
             </h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -117,12 +122,20 @@
               <li>Watch on-line or download shows to view offline!</li>
               <li>Up to 6 user accounts</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-light">
-              Contact us
+            <button type="button" (click)="purchasePlan(9999, 'premium')" class="w-100 btn btn-lg btn-light">
+              Get started
             </button>
           </div>
         </div>
       </div>
+    </div>
+    <p class="fs-5 text-body-secondary" style="text-align: center; padding: 10px;" *ngIf="isLoggedIn()">
+      Not interested?
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3" *ngIf="isLoggedIn()">
+        Back to Browse
+      </button>
     </div>
   </main>
 </div>
