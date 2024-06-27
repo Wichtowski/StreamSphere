@@ -8,18 +8,28 @@
     <em>Your seamless, immersive streaming experience!</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/Wichtowski/StreamSphere.git?style=default&logo=opensourceinitiative&logoColor=white&color=09e3b8" alt="license">
-	<img src="https://img.shields.io/github/last-commit/Wichtowski/StreamSphere.git?style=default&logo=git&logoColor=white&color=09e3b8" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/Wichtowski/StreamSphere.git?style=default&color=09e3b8" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/Wichtowski/StreamSphere.git?style=default&color=09e3b8" alt="repo-language-count">
+	<img src="https://img.shields.io/github/last-commit/wichtowski/StreamSphere" alt="last-commit">
+	<img src="https://img.shields.io/github/commit-activity/w/wichtowski/StreamSphere" alt="commit-freq">
+	<img src="https://img.shields.io/github/languages/count/wichtowski/StreamSphere" alt="repo-language-count">
+	<img src="https://img.shields.io/github/commit-activity/w/wichtowski/StreamSphere" alt="repo-version">
+	<img src="https://img.shields.io/github/actions/workflow/status/wichtowski/StreamSphere/main.yml" alt="repo-workflow-status">
+	<img src="https://github.com/github/docs/actions/workflows/main.yml/badge.svg" alt="repo-version">
+	<img src="https://img.shields.io/github/license/wichtowski/StreamSphere" alt="license">
+  <br/>
+	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=Typescript&logoColor=FFFFFF" alt="Typescript">
+	<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular">
+	<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
+	<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="NPM">
+	<img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+	<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+	<img src="https://img.shields.io/badge/VideoJS-000000?style=for-the-badge&logoColor=FFFFFF" alt="VideoJS">
 <p>
 <p align="center">
 	<!-- default option, no dependency badges. -->
 </p>
-
 <br><!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary><br>
+
+<h3>Quick Links</h3>
 
 - [📍 Overview](#-overview)
 - [🧩 Features](#-features)
@@ -30,10 +40,8 @@
   - [🤖 Usage](#-usage)
   - [🧪 Tests](#-tests)
 - [🛠 Project Roadmap](#-project-roadmap)
-- [🤝 Contributing](#-contributing)
 - [🎗 License](#-license)
 - [🔗 Acknowledgments](#-acknowledgments)
-</details>
 <hr>
 
 ## 📍 Overview
@@ -44,7 +52,14 @@ StreamSpheres is an innovative media platform, offering a immersive streaming ex
 
 ## 🧩 Features
 
-
+- Ad system
+- Basic sign in system
+- Mocked P24 integration
+- Swiper & Bootstrap Carousels
+- Path guarding dependent on user login status
+- Ability to watch videos hosted on YouTube
+- Ability to watch videos hosted on the github by VideoJS
+- No Backend (most of responses are mocked/taken from .json files)
 
 ---
 
