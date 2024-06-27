@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule, NgIf, NgSwitch } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { HttpClient, provideHttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -31,8 +32,8 @@ import { WideCarouselComponent } from './wide-carousel/wide-carousel.component';
     SmallCarouselComponent,
     WideCarouselComponent,
   ],
-  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes)],
-  providers: [],
+  imports: [BrowserModule, FormsModule, CommonModule, RouterLink, NgSwitch, NgIf, RouterModule.forRoot(routes), HttpClientModule],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
