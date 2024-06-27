@@ -13,7 +13,6 @@
 	<img src="https://img.shields.io/github/languages/count/wichtowski/StreamSphere" alt="repo-language-count">
 	<img src="https://img.shields.io/github/commit-activity/w/wichtowski/StreamSphere" alt="repo-version">
 	<img src="https://img.shields.io/github/actions/workflow/status/wichtowski/StreamSphere/main.yml" alt="repo-workflow-status">
-	<img src="https://github.com/github/docs/actions/workflows/main.yml/badge.svg" alt="repo-version">
 	<img src="https://img.shields.io/github/license/wichtowski/StreamSphere" alt="license">
   <br/>
 	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=Typescript&logoColor=FFFFFF" alt="Typescript">
