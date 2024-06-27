@@ -11,9 +11,10 @@ import { LocalStorageService } from '../services/local-storage.service';
   styleUrl: './ad.component.scss',
 })
 export class AdComponent implements OnInit {
+  @Input() adId: string = '';
+  @Input() adEndDate: string = '';
   paragraf: string = 'Get 50% off on your purchase for limited time!';
   subscriptionType: string = '';
-  @Input() adId: string = '';
   altText: string = `Advertisement image for Users`;
   countdownText: string = '';
 
@@ -29,22 +30,27 @@ export class AdComponent implements OnInit {
     if (!['0', '1', '2', '3'].includes(this.adId)) {
       this.adId = '0';
     }
+    const saleEndTime = new Date(this.adEndDate);
 
-    const saleEndTime = new Date('07-20-2024');
-
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       const currentTime = new Date();
       const timeDifference = saleEndTime.getTime() - currentTime.getTime();
-
       if (timeDifference > 0) {
         const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
+        // console.log(this.adId);
         this.countdownText = `${days}d ${hours}h ${minutes}min ${seconds}s`;
       } else {
+        console.log(this.adId);
+        document.querySelectorAll(`.image-container-${this.adId} > img, .image-container p, .ad-switch[ng-reflect-ng-switch="${this.adId}"`).forEach((element) => {
+          const htmlElement = element as HTMLElement;
+          htmlElement.style.cursor = 'auto';
+          htmlElement.style.pointerEvents = 'none';
+        });
         this.countdownText = 'Sale ended';
+        clearInterval(intervalId);
       }
     }, 1000);
   }

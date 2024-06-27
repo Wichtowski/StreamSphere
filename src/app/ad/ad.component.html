@@ -1,68 +1,62 @@
 <div [ngSwitch]="subscriptionType">
     <div *ngSwitchCase="'free'" class="ad-container">
-        <div [ngSwitch]="adId" class="ad-switch">
-            <div *ngSwitchCase="'1'" class="ad-content" [routerLink]="['/']"
-                fragment="regular">
+        <div [ngSwitch]="adId" class="ad-switch ad-switch-${{adId}}">
+            <div *ngSwitchCase="'1'" class="ad-content" [routerLink]="['/']" fragment="regular">
                 <div class="ad-desktop-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
+                    <div class="image-container image-container-{{adId}}">
                         <img src="regular-plan.png" alt="{{altText}}">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="ad-mobile-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
-                        <img src="regular-plan-mobile.png" alt="{{altText}}"
-                            loading="lazy">
+                    <div class="image-container image-container-{{adId}}">
+                        <img src="regular-plan-mobile.png" alt="{{altText}}" loading="lazy">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div *ngSwitchCase="'2'" class="ad-content" [routerLink]="['/']"
-                fragment="premium">
+            <div *ngSwitchCase="'2'" class="ad-content" [routerLink]="['/']" fragment="premium">
                 <div class="ad-desktop-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
+                    <div class="image-container image-container-{{adId}}">
                         <img src="try-premium.png" alt="{{altText}}">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="ad-mobile-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
-                        <img src="try-premium-mobile.png" alt="{{altText}}"
-                            loading="lazy">
+                    <div class="image-container image-container-{{adId}}">
+                        <img src="try-premium-mobile.png" alt="{{altText}}" loading="lazy">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div *ngSwitchCase="'3'" class="ad-content" [routerLink]="['/']"
-                fragment="regular">
+            <div *ngSwitchCase="'3'" class="ad-content" [routerLink]="['/']" fragment="regular">
                 <div class="ad-desktop-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
+                    <div class="image-container image-container-{{adId}}">
                         <img src="premium-plan.png" alt="{{altText}}">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="ad-mobile-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
-                        <img src="premium-plan-mobile.png" alt="{{altText}}"
-                            loading="lazy">
+                    <div class="image-container image-container-{{adId}}">
+                        <img src="premium-plan-mobile.png" alt="{{altText}}" loading="lazy">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
@@ -70,52 +64,47 @@
         </div>
     </div>
     <div *ngSwitchCase="'regular'" class="ad-container">
-        <div [ngSwitch]="adId" class="ad-switch">
-            <div *ngSwitchCase="'2'" class="ad-content" [routerLink]="['/']"
-                fragment="premium">
+        <div [ngSwitch]="adId" class="ad-switch ad-switch-{{adId}}">
+            <div *ngSwitchCase="'2'" class="ad-content" [routerLink]="['/']" fragment="premium">
                 <div class="ad-desktop-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
+                    <div class="image-container image-container-{{adId}}">
                         <img src="try-premium.png" alt="{{altText}}">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="ad-mobile-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
-                        <img src="try-premium-mobile.png" alt="{{altText}}"
-                            loading="lazy">
+                    <div class="image-container image-container-{{adId}}">
+                        <img src="try-premium-mobile.png" alt="{{altText}}" loading="lazy">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div *ngSwitchCase="'3'" class="ad-content" [routerLink]="['/']"
-                fragment="premium">
+            <div *ngSwitchCase="'3'" class="ad-content" [routerLink]="['/']" fragment="premium">
                 <div class="ad-desktop-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
+                    <div class="image-container image-container-{{adId}}">
                         <img src="premium-plan.png" alt="{{altText}}">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="ad-mobile-content">
                     <p>{{paragraf}}</p>
-                    <div class="image-container">
-                        <img src="premium-plan-mobile.png" alt="{{altText}}"
-                            loading="lazy">
+                    <div class="image-container image-container-{{adId}}">
+                        <img src="premium-plan-mobile.png" alt="{{altText}}" loading="lazy">
                         <div class="countdown-overlay">
-                            <p>{{countdownText}}</p>
+                            <p class="countdown-{{adId}}">{{countdownText}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
