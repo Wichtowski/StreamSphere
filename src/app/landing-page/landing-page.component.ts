@@ -1,15 +1,16 @@
 import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
+import { NgIf, ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
 import * as CryptoJS from 'crypto-js';
 import { FooterComponent } from '../footer/footer.component';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [RouterLink, FooterComponent],
+  imports: [RouterLink, FooterComponent, NgIf],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
@@ -23,6 +24,7 @@ export class LandingPageComponent implements OnInit {
     private renderer: Renderer2,
     private el: ElementRef,
     private http: HttpClient,
+    private sessionService: SessionService,
   ) {}
 
   ngOnInit(): void {
@@ -55,6 +57,10 @@ export class LandingPageComponent implements OnInit {
         }
       }
     });
+  }
+
+  isLoggedIn(): boolean {
+    return this.sessionService.getSessionState();
   }
 
   redirectTo(path: string) {

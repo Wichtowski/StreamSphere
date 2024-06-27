@@ -1,16 +1,20 @@
 <div class="px-4 py-5 my-5 text-center" data-bs-theme="dark">
   <img src="./logo.png" style="padding-bottom: 50px; width: 80vw; max-width: 502px;">
-  <h1 class="display-5 fw-bold text-body-emphasis">Join StreamSphere</h1>
+  <h1 class="display-5 fw-bold text-body-emphasis">
+    <span *ngIf="isLoggedIn()">Adjust Your Plan!</span>
+    <span *ngIf="!isLoggedIn()">Join StreamSphere</span>
+  </h1>
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">
       Thousands of on-demand movies and shows, all accessible from the comfort
       of your browser.
     </p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3">
-        Log in!
-      </button>
-    </div>
+  </div>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3">
+      <span *ngIf="isLoggedIn()">Back to Browse</span>
+      <span *ngIf="!isLoggedIn()">Log In</span>
+    </button>
   </div>
 </div>
 
@@ -48,7 +52,7 @@
 
 <div class="container py-3">
   <header>
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" id="pricing">
       <h1 class="display-4 fw-normal text-body-emphasis">Plans</h1>
       <p class="fs-5 text-body-secondary">
         Pick a perfect plan to suit your viewing needs. Or try it
@@ -124,6 +128,14 @@
           </div>
         </div>
       </div>
+    </div>
+    <p class="fs-5 text-body-secondary" style="text-align: center; padding: 10px;" *ngIf="isLoggedIn()">
+      Not interested?
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button type="button" (click)="redirectTo('/signIn')" class="btn btn-light btn-lg px-4 gap-3" *ngIf="isLoggedIn()">
+        Back to Browse
+      </button>
     </div>
   </main>
 </div>

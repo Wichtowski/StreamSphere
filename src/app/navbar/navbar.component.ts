@@ -28,6 +28,7 @@ export class NavbarComponent {
       }
     });
   }
+  
   ngOnInit() {
     const logo = this.authService.getLogState();
     this.logo = logo === true ? true : false;
