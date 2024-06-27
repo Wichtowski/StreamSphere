@@ -44,11 +44,15 @@ export class AdComponent implements OnInit {
         this.countdownText = `${days}d ${hours}h ${minutes}min ${seconds}s`;
       } else {
         console.log(this.adId);
-        document.querySelectorAll(`.image-container-${this.adId} > img, .image-container p, .ad-switch[ng-reflect-ng-switch="${this.adId}"`).forEach((element) => {
-          const htmlElement = element as HTMLElement;
-          htmlElement.style.cursor = 'auto';
-          htmlElement.style.pointerEvents = 'none';
-        });
+        document
+          .querySelectorAll(
+            `.image-container-${this.adId} > img, .image-container p, .ad-switch[ng-reflect-ng-switch="${this.adId}"`,
+          )
+          .forEach((element) => {
+            const htmlElement = element as HTMLElement;
+            htmlElement.style.cursor = 'auto';
+            htmlElement.style.pointerEvents = 'none';
+          });
         this.countdownText = 'Sale ended';
         clearInterval(intervalId);
       }
