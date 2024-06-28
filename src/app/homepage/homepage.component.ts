@@ -31,5 +31,11 @@ import { WideCarouselComponent } from '../wide-carousel/wide-carousel.component'
 })
 export class HomepageComponent {
   constructor(private router: Router) {}
-  ngOnInit() {}
+  currentUrl(url: string): boolean {
+    if (this.router.url === url) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
