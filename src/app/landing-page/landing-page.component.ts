@@ -68,6 +68,9 @@ export class LandingPageComponent implements OnInit {
   }
 
   purchasePlan(price: number, plan: string) {
+    if (this.router.url === '/#premium') {
+      price = 4999;
+    }
     const sessionId = this.generateRandomString(10);
     let signparams =
       '{"sessionId":"' +
