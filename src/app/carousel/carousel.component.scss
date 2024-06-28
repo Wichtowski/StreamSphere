@@ -107,3 +107,16 @@
 .carousel-indicators .dot.active {
   background-color: $color_3;
 }
+
+@media screen and (max-width: 990px) {
+  .carousel-caption {
+    bottom: 10px;
+  }
+  .carousel-text {
+    padding-left: $spacing_2;
+  }
+  .carousel-button {
+    padding-right: 10px;
+  }
+  
+}

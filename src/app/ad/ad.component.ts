@@ -40,10 +40,8 @@ export class AdComponent implements OnInit {
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        // console.log(this.adId);
         this.countdownText = `${days}d ${hours}h ${minutes}min ${seconds}s`;
       } else {
-        console.log(this.adId);
         document
           .querySelectorAll(
             `.image-container-${this.adId} > img, .image-container p, .ad-switch[ng-reflect-ng-switch="${this.adId}"`,
