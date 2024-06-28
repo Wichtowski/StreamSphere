@@ -31,7 +31,7 @@
     "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
     "rating": 8.7,
     "poster": "matrix.png",
-    "genre": "Action, Mature, Sci-Fi",
+    "genre": "Action, Mature, Sci-Fi, Movies",
     "youtubeID": "vKQi3bBA1y8"
   },
   {
@@ -40,7 +40,7 @@
     "description": "A thief who steals corporate secrets of dream-sharing technology and is given the inverse task.",
     "rating": 8.8,
     "poster": "inception.png",
-    "genre": "Action, Mature, Sci-Fi, Thriller",
+    "genre": "Action, Mature, Sci-Fi, Thriller, Movies",
     "youtubeID": "YoHD9XEInc0"
   },
   {
@@ -49,7 +49,7 @@
     "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
     "rating": 8.6,
     "poster": "interstellar.png",
-    "genre": "Action, Mature, Sci-Fi, Thriller, Drama",
+    "genre": "Action, Mature, Sci-Fi, Thriller, Drama, Movies",
     "youtubeID": "zSWdZVtXT7E"
   },
   {
@@ -58,7 +58,7 @@
     "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.",
     "rating": 9.0,
     "poster": "one-punch-man.png",
-    "genre": "Anime, Action, Comedy",
+    "genre": "Anime, Action",
     "customPlayerID": "One-Punch-Man-Official-Trailer"
   },
   {
@@ -67,7 +67,7 @@
     "description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",
     "rating": 9.2,
     "poster": "rick-and-morty.png",
-    "genre": "Action, Adventure, Comedy",
+    "genre": "Action, Adventure, Serials",
     "customPlayerID": "Rick-and-Morty-Official-Trailer"
   },
   {
@@ -76,7 +76,7 @@
     "description": "The satiric adventures of a working-class family in the misfit city of Springfield.",
     "rating": 8.7,
     "poster": "simpsons.png",
-    "genre": "Animation, Comedy",
+    "genre": "Animation, Serials",
     "customPlayerID": "The-Simpsons-Official-Trailer"
   },
   {
@@ -85,7 +85,7 @@
     "description": "A high school chemistry teacher turned meth maker partners with a former student to secure his family's future.",
     "rating": 9.5,
     "poster": "breaking-bad.png",
-    "genre": "Crime, Drama, Thriller",
+    "genre": "Crime, Drama, Thriller, Serials",
     "customPlayerID": "Breaking-Bad-Official-Trailer"
   },
   {
@@ -94,7 +94,7 @@
     "description": "Nine noble families fight for control over the mythical lands of Westeros.",
     "rating": 9.3,
     "poster": "game-of-thrones.png",
-    "genre": "Action, Adventure, Drama",
+    "genre": "Action, Adventure, Drama, Serials",
     "customPlayerID": "Game-of-Thrones-Official-Trailer"
   },
   {
@@ -103,7 +103,7 @@
     "description": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins, and must lead a group of survivors to stay alive.",
     "rating": 8.4,
     "poster": "the-walking-dead.png",
-    "genre": "Drama, Horror, Thriller",
+    "genre": "Drama, Horror, Thriller, Serials",
     "customPlayerID": "The-Walking-Dead-Official-Trailer"
   },
   {
@@ -177,5 +177,77 @@
     "poster": "neon-genesis-evangelion.png",
     "genre": "Anime, Action, Mecha, Psychological, Sci-Fi",
     "customPlayerID": "Neon-Genesis-Evangelion-Official-Trailer"
+  },
+  {
+    "id": 21,
+    "title": "The Hangover",
+    "description": "Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing.",
+    "rating": 7.7,
+    "poster": "the-hangover.png",
+    "genre": "Comedy, Mature, Movies",
+    "youtubeID": "tcdUhdOlz9M"
+  },
+  {
+    "id": 22,
+    "title": "Superbad",
+    "description": "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
+    "rating": 7.6,
+    "poster": "superbad.png",
+    "genre": "Comedy, Mature, Teen, Movies",
+    "youtubeID": "4eaZ_48ZYog"
+  },
+  {
+    "id": 23,
+    "title": "Step Brothers",
+    "description": "Two aimless middle-aged losers still living at home are forced against their will to become roommates when their parents marry.",
+    "rating": 6.9,
+    "poster": "step-brothers.png",
+    "genre": "Comedy, Mature, Movies",
+    "youtubeID": "ANjenc4W1_Q"
+  },
+  {
+    "id": 24,
+    "title": "Anchorman",
+    "description": "Ron Burgundy is San Diego's top-rated newsman in the male-dominated broadcasting of the 1970s, but that's all about to change for Ron and his cronies.",
+    "rating": 7.2,
+    "poster": "anchorman.png",
+    "genre": "Comedy, Mature, Movies",
+    "youtubeID": "NJQ4qEWm9lU"
+  },
+  {
+    "id": 25,
+    "title": "Dumb and Dumber",
+    "description": "The cross-country adventures of two good-hearted but incredibly stupid friends.",
+    "rating": 7.3,
+    "poster": "dumb-and-dumber.png",
+    "genre": "Comedy, Mature, Movies",
+    "youtubeID": "l13yPhimE3o"
+  },
+  {
+    "id": 26,
+    "title": "The Good, the Bad and the Ugly",
+    "description": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+    "rating": 8.8,
+    "poster": "the_good_the_bad_and_the_ugly.png",
+    "genre": "Western, Action, Adventure, Movies",
+    "youtubeID": "WCN5JJY_wiA"
+  },
+  {
+    "id": 27,
+    "title": "Unforgiven",
+    "description": "Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man.",
+    "rating": 8.2,
+    "poster": "unforgiven.png",
+    "genre": "Western, Drama, Movies",
+    "youtubeID": "HBY7v8uFny0"
+  },
+  {
+    "id": 28,
+    "title": "Django Unchained",
+    "description": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
+    "rating": 8.4,
+    "poster": "django_unchained.png",
+    "genre": "Western, Action, Drama, Movies",
+    "youtubeID": "0fUCuvNlOCg"
   }
 ]
