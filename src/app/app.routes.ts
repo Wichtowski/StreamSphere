@@ -27,8 +27,8 @@ export const routes: Routes = [
 ];
 
 const routerOptions: ExtraOptions = {
-  onSameUrlNavigation: 'reload', // This ensures navigation within the same route triggers events
-  scrollPositionRestoration: 'enabled', // This restores the scroll position on navigation
+  onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'enabled',
 };
 
 @NgModule({
