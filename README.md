@@ -32,14 +32,15 @@
 
 - [📍 Overview](#-overview)
 - [🧩 Features](#-features)
-- [🗂️ Repository Structure](#️-repository-structure)
+- [🎨 Designs](#-designs)
+- [🗂️ Simplified Repo Structure](#️-simplified-repo-structure)
 - [📦 Modules](#-modules)
 - [🚀 Getting Started](#-getting-started)
   - [⚙️ Installation](#️-installation)
   - [🤖 Usage](#-usage)
   - [🧪 Tests](#-tests)
-- [🛠 Project Roadmap](#-project-roadmap)
-- [🎗 License](#-license)
+- [🔨 Project Roadmap](#-project-roadmap)
+- [📝 License](#-license)
 - [🔗 Acknowledgments](#-acknowledgments)
 <hr>
 
@@ -62,7 +63,18 @@ StreamSpheres is an innovative media platform, offering a immersive streaming ex
 
 ---
 
-## 🗂️ Repository Structure
+## 🎨 Designs
+
+- [Landing Page](https://www.figma.com/design/DgV1Z5Tvnh2REOvHCkimXJ/Projekt-technologie-Internetowe?node-id=48-63&t=681CRhSOxvWV2C4v-1)
+- [Homepage](https://www.figma.com/design/DgV1Z5Tvnh2REOvHCkimXJ/Projekt-technologie-Internetowe?node-id=46-3&t=681CRhSOxvWV2C4v-0)
+- [Sign In Page](https://www.figma.com/design/DgV1Z5Tvnh2REOvHCkimXJ/Projekt-technologie-Internetowe?node-id=46-2&t=681CRhSOxvWV2C4v-1)
+- [Sign Up Page](https://www.figma.com/design/DgV1Z5Tvnh2REOvHCkimXJ/Projekt-technologie-Internetowe?node-id=46-4&t=681CRhSOxvWV2C4v-0)
+- [Video Player](https://www.figma.com/design/DgV1Z5Tvnh2REOvHCkimXJ/Projekt-technologie-Internetowe?node-id=51-68&t=681CRhSOxvWV2C4v-0)
+
+
+---
+
+## 🗂️ Simplified Repo Structure
 
 ```sh
 └── StreamSphere/
@@ -74,34 +86,6 @@ StreamSpheres is an innovative media platform, offering a immersive streaming ex
     ├── package-lock.json
     ├── package.json
     ├── public
-    │   ├── One-Punch-Man-Official-Trailer-1440p.mp4
-    │   ├── One-Punch-Man-Official-Trailer-720p.mp4
-    │   ├── adventure-time.png
-    │   ├── default-account.png
-    │   ├── download_anim.webp
-    │   ├── facebook.webp
-    │   ├── favicon.ico
-    │   ├── inception.png
-    │   ├── instagram.webp
-    │   ├── interstellar.png
-    │   ├── logo.png
-    │   ├── lol.png
-    │   ├── matrix.png
-    │   ├── one-piece.png
-    │   ├── one-punch-man-5nllppby1814evua.jpg
-    │   ├── one-punch-man.png
-    │   ├── people-watching-in-cinema.png
-    │   ├── people-watching-in-home.png
-    │   ├── premium-plan-mobile.png
-    │   ├── premium-plan.png
-    │   ├── regular-plan-mobile.png
-    │   ├── regular-plan.png
-    │   ├── spongebob.png
-    │   ├── tiktok.png
-    │   ├── try-premium-mobile.png
-    │   ├── try-premium.png
-    │   ├── watch_anim.webp
-    │   └── youtube.webp
     ├── src
     │   ├── app
     │   ├── index.html
@@ -325,9 +309,9 @@ Make sure you have these dependencies installed on your system before proceeding
 
 <h4>From <code>source</code></h4>
 
-> Run StreamSphere using the command below:
+> Run StreamSphere using angular reactive compiler:
 > ```console
-> $ npm run build && node dist/main.js
+> $ npm run start
 > ```
 
 ### 🧪 Tests
@@ -339,7 +323,7 @@ Make sure you have these dependencies installed on your system before proceeding
 
 ---
 
-## 🛠 Project Roadmap
+## 🔨 Project Roadmap
 
 - [X] `► Getting basic understand of product`
 - [X] `► Creating Designs for app`
@@ -353,12 +337,9 @@ Make sure you have these dependencies installed on your system before proceeding
 
 ---
 
-<details>
+## 📝 License
 
-
-## 🎗 License
-
-This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/) License.
+This project is protected under the [MIT License](https://github.com/Wichtowski/StreamSphere?tab=MIT-1-ov-file) License.
 
 ---
 
@@ -378,6 +359,4 @@ List of recourses used in Project:
 
 ---
 
-[**Return to top**](#-overview)
-
----
+## [**Return to top**](#-overview)
