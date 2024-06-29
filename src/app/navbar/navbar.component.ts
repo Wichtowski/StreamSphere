@@ -39,6 +39,6 @@ export class NavbarComponent {
     this.sessionService.setSessionState(false);
     this.localStorageService.clearLocalStorage();
     this.logo = false;
-    this.router.navigate(['/']);
+    this.router.navigate(['/signIn']);
   }
 }

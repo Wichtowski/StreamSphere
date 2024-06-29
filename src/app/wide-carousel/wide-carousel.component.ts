@@ -3,7 +3,6 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { register } from 'swiper/element/bundle';
 import videos from '../assets/videos.json';
-import { Navigation, Pagination } from 'swiper/modules';
 
 @Component({
   selector: 'app-wide-carousel',
