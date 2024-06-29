@@ -327,7 +327,7 @@ Make sure you have these dependencies installed on your system before proceeding
 
 - [X] `► Getting basic understand of product`
 - [X] `► Creating Designs for app`
-- [X] `► Mindstorming aboutthe UI and UX of app`
+- [X] `► Mindstorming about the UI and UX of app`
 - [X] `► Setting up a Project`
 - [X] `► Creating components`
 - [X] `► Setting up eslint, prettier & husky`
