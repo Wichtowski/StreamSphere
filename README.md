@@ -52,14 +52,17 @@ StreamSpheres is an innovative media platform, offering a immersive streaming ex
 
 ## 🧩 Features
 
-- Ad system
+- Ad system with time based promotions
 - Basic sign in system
 - Mocked P24 integration
 - Swiper & Bootstrap Carousels
+- Session based user authorization
+- Subscription based video quality
 - Path guarding dependent on user login status
 - Ability to watch videos hosted on YouTube
-- Ability to watch videos hosted on the github by VideoJS
+- Ability to watch videos hosted on the github by VideoJS 
 - No Backend (most of responses are mocked/taken from .json files)
+- CI/CD on merge to main with environment on Github Pages
 
 ---
 
